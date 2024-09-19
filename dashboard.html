@@ -1,8 +1,8 @@
 <!doctype html>
 
 <html lang="en" data-layout="horizontal" data-layout-style="default" data-layout-position="fixed" data-topbar="light"
-    data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light" data-layout-width="fluid"
-    data-preloader="disable">
+    data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
+    data-layout-width="fluid" data-preloader="disable">
 
 </html>
 
@@ -451,7 +451,6 @@
                                                                             <div class="edit">
                                                                                 <button
                                                                                     class="btn btn-sm btn-success edit-item-btn"
-                                                                                    data-bs-toggle="modal"
                                                                                     data-bs-target="#showModal">Receive</button>
                                                                             </div>
 
@@ -563,6 +562,12 @@
                                                         </div>
                                                         <hr>
 
+                                                        <center><button type="button" class="btn btn-success"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target=".bs-example-modal-xl">File
+                                                                Tracking</button></center>
+
+
                                                     </div>
                                                 </div>
 
@@ -604,6 +609,442 @@
     </div>
     <!-- END layout-wrapper -->
 
+    <div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myExtraLargeModalLabel">Search Files</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card-header">
+                        <div class="search-box ms-2">
+                            <input type="text" class="form-control search" placeholder="Search by ID or Description">
+                            <i class="ri-search-line search-icon"></i>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills animation-nav nav-justified gap-2 mb-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab"
+                                    href="#all-files" role="tab">
+                                    All Files
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                    href="#unreceived-files" role="tab">
+                                    Unreceived Files
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#received-files"
+                                    role="tab">
+                                    Received Files
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                    href="#originated-files" role="tab">
+                                    Originated Files
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                    href="#inward-register" role="tab">
+                                    Inward Register
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                    href="#outward-register" role="tab">
+                                    Outward Register
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content text-muted">
+                            <div class="tab-pane active" id="all-files" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">ACG Office</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane" id="unreceived-files" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">ACG Office</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane" id="received-files" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">ACG Office</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane" id="originated-files" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">ACG Office</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="inward-register" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">ACG Office</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane" id="outward-register" role="tabpanel">
+
+                                <div class="listjs-table" id="customerList">
+
+                                    <div class="table-responsive table-card mt-3 mb-1">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 50px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="checkAll" value="option">
+                                                        </div>
+                                                    </th>
+
+                                                    <th class="sort" data-sort="email">File ID</th>
+                                                    <th class="sort" data-sort="phone">Description
+                                                    </th>
+                                                    <th class="sort" data-sort="date">Status</th>
+
+                                                    <th class="sort" data-sort="date">Timestamp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                name="chk_child" value="option1">
+                                                        </div>
+                                                    </th>
+
+                                                    <td class="customer_name">Outward</td>
+                                                    <td class="email">NCS\HQTRS\452</td>
+                                                    <td class="phone">testing</td>
+                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <div class="pagination-wrap hstack gap-2" style="display: none;">
+                                            <a class="page-item pagination-prev disabled" href="javascript:void(0);">
+                                                Previous
+                                            </a>
+                                            <ul class="pagination listjs-pagination mb-0">
+                                                <li class="active"><a class="page" href="#" data-i="1"
+                                                        data-page="8">1</a></li>
+                                            </ul>
+                                            <a class="page-item pagination-next disabled" href="javascript:void(0);">
+                                                Next
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div><!-- end card-body -->
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="btn btn-link link-success shadow-none fw-medium"
+                        data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
 
 
     <!--start back-to-top-->
