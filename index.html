@@ -14,7 +14,7 @@
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
+    <!-- <script src="assets/js/layout.js"></script> -->
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -22,32 +22,35 @@
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" /> -->
 
     <style>
-        /* Full-page banner styling */
         .video-banner {
             position: relative;
             width: 100%;
             height: 100vh;
-            /* 100% of the viewport height */
+            /* Full viewport height */
             overflow: hidden;
+            /* Make sure content outside bounds is hidden */
+            z-index: 1;
+            /* Ensure the video container is on the correct layer */
         }
 
-        /* Video full width and height */
         .video-banner video {
             position: absolute;
             top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%);
             z-index: -1;
+            /* Video should be behind content */
+            object-fit: cover;
+            /* Ensure video covers the container */
         }
 
-        /* Optional: Overlay content on the video */
         .banner-content {
             position: absolute;
             top: 0;
@@ -59,13 +62,21 @@
             align-items: center;
             color: white;
             text-align: center;
-            z-index: 1;
+            z-index: 2;
+            /* Ensure content is on top of the video */
         }
 
-        /* Optional: Background fallback for mobile devices */
-        /* .video-banner {
-            background: url('fallback-image.jpg') no-repeat center center/cover;
-        } */
+        .banner-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Add explicit media queries for responsiveness */
+        @media (max-width: 768px) {
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 
 </head>
@@ -87,17 +98,14 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
-
                         <li class="nav-item">
                             <a class="nav-link fs-15" style="color: black;" href="#">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-15" style="color: black;" href="#">CHANGE PASSWORD</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link fs-15" style="color: black;" href="#">HELP</a>
                         </li>
@@ -107,19 +115,16 @@
                             style="background-color:#0b6528; color: white;">Login</a>
                     </div>
                 </div>
-
             </div>
         </nav>
         <div class="bg-overlay bg-overlay-pattern"></div>
         <!-- end navbar -->
-
         <div class="video-banner">
             <video autoplay muted loop>
                 <source src="assets/images/banner/banner-vid.mp4" type="video/mp4">
             </video>
-            
             <div class="banner-content">
-                <!-- <h1>Your Banner Text Here</h1> -->
+                <h1>Your Banner Text Here</h1>
             </div>
         </div>
 
@@ -128,29 +133,29 @@
             <div class="container">
 
                 <div class="row g-4">
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="text-center">
                             <div class="card-body py-5 px-4">
                                 <img src="login.jpg" alt="" height="55" class="mb-3 pb-2">
-                                <h3><a href="#" style="color: #0b6528">Login</a></h3>
+                                <h3><a href="login.html" style="color: #0b6528">Login</a></h3>
                                 <p class="text-dark pb-1 fs-13">Get access to your File TrackA dashboard</p>
                             </div>
                         </div>
                     </div><!-- end col -->
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="text-center">
                             <div class="card-body py-5 px-4">
-                                <img src="assets/images/nft/wallet/coinbase.png" alt="" height="55" class="mb-3 pb-2">
+                                <img src="#" alt="" height="55" class="mb-3 pb-2">
                                 <h3><a href="#" style="color: #0b6528">Change Your Password</a></h3>
                                 <p class="text-dark pb-1 fs-13">Change your password securely and easily.</p>
                             </div>
                         </div>
                     </div>
                     <!-- end col -->
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="text-center">
                             <div class="card-body py-5 px-4">
-                                <img src="assets/images/nft/wallet/binance.png" alt="" height="55" class="mb-3 pb-2">
+                                <img src="#" alt="" height="55" class="mb-3 pb-2">
                                 <h3><a href="#" style="color: #0b6528">Help</a></h3>
                                 <p class="text-dark pb-1 fs-13">Need help? Click here...</p>
                             </div>
@@ -163,10 +168,8 @@
         <!-- Start footer -->
         <footer class="custom-footer py-5 position-relative" style="background-color: #0b6528;">
             <div class="container">
-
                 <div class="row text-center text-sm-start align-items-center mt-5">
                     <div class="col-sm-6">
-
                         <div>
                             <p class="copy-rights mb-0" style="color: white;">
                                 <script> document.write(new Date().getFullYear()) </script> © FileTrakA. Nigeria Customs
@@ -184,7 +187,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -198,19 +200,12 @@
             <i class="ri-arrow-up-line"></i>
         </button>
         <!--end back-to-top-->
-
     </div>
     <!-- end layout wrapper -->
-
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/js/plugins.js"></script>
-
     <!--Swiper slider js-->
     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 
