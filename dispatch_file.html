@@ -9,7 +9,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>FileTrakA - Create File</title>
+    <title>FileTrakA - Dispatch File </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="FileTrakA" name="description" />
     <!-- App favicon -->
@@ -242,19 +242,69 @@
                                         <div class="card">
                                             <div class="card-header align-items-center d-flex"
                                                 style="background-color: #0b6528;">
-                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Create
-                                                    New File</h4>
+                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Dispatch File</h4>
 
                                             </div><!-- end card header -->
                                             <div class="card-body">
                                                 <div class="live-preview">
                                                     <div class="row gy-4">
+                                                       
+                                                        <div class="col-xxl-3 col-md-12">
+                                                            <div>
+                                                                <select class="form-select mb-3"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Search By File ID</option>
+                                                                    <option>Search By Description</option>
+                                                                </select>
+                                                                <input type="text" class="form-control" id="basiInput"
+                                                                    placeholder="Enter File ID or Description">
+
+                                                            </div>
+                                                        </div>
+
+                                                       
+                                                        <!--end col-->
+                                                        <div class="col-xxl-3 col-md-12">
+                                                            <div>
+                                                                <label for="exampleFormControlTextarea5"
+                                                                    class="form-label">Start Date</label>
+                                                                    <input type="date" class="form-control" id="start_date">
+                                                            </div>
+                                                            <!-- <div>
+                                                                <label for="exampleFormControlTextarea5"
+                                                                    class="form-label">End Date</label>
+                                                                    <input type="date" class="form-control" id="start_date">
+                                                            </div> -->
+                                                        </div>
+                                                        <!--end col-->
+
+                                                        <div class="col-xxl-3 col-md-12">
+                                                            <div>
+                                                          
+                                                                <label for="exampleFormControlTextarea5"
+                                                                    class="form-label">End Date</label>
+                                                                    <input type="date" class="form-control" id="start_date">
+                                                            </div>
+                                                        </div>
+                                                        <!--end col-->
+
+
+                                                        <!--end col-->
+                                                        <div class="edit">
+                                                            <button class="btn btn-lg btn-success edit-item-btn"
+                                                                style="background-color:#0b6528; color: white;"
+                                                                onmouseover="this.style.backgroundColor='grey';"
+                                                                onmouseout="this.style.backgroundColor='#0b6528';">Search</button>
+                                                        </div>
+
+
+                                                        <hr>
                                                         <div class="col-xxl-3 col-md-12">
                                                             <div>
                                                                 <label for="basiInput" class="form-label">File
                                                                     Number</label>
                                                                 <input type="text" class="form-control" id="basiInput"
-                                                                    value="NCS-">
+                                                                    value="">
                                                             </div>
                                                         </div>
 
@@ -278,11 +328,8 @@
                                                                     </option>
                                                                     <option value="DC REVENUE">DC REVENUE</option>
                                                                     <option value="Oic STATION">Oic STATION</option>
-                                                                    <option value="Create New Unit">Create New Unit
                                                                     </option>
                                                                 </select>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="New Unit Name">
 
                                                             </div>
                                                         </div>
@@ -301,26 +348,12 @@
                                                             </div>
                                                         </div>
 
-                                                        <!--end col-->
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="exampleFormControlTextarea5"
-                                                                    class="form-label">File Description</label>
-                                                                <textarea class="form-control"
-                                                                    id="exampleFormControlTextarea5"
-                                                                    rows="3"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <!--end col-->
-
-
-                                                        <!--end col-->
-                                                        <div class="edit">
+                                                         <!--end col-->
+                                                         <div class="edit">
                                                             <button class="btn btn-lg btn-success edit-item-btn"
                                                                 style="background-color:#0b6528; color: white;"
                                                                 onmouseover="this.style.backgroundColor='grey';"
-                                                                onmouseout="this.style.backgroundColor='#0b6528';">Create
-                                                                File</button>
+                                                                onmouseout="this.style.backgroundColor='#0b6528';">Dispatch File</button>
                                                         </div>
 
                                                         <!--end col-->

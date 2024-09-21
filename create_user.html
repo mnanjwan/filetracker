@@ -48,19 +48,19 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <h1>FileTrakA</h1>
+                                    <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                                 <span class="logo-lg">
-                                    <h1>FileTrakA</h1>
+                        <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <h1>FileTrakA</h1>
+                                    <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                                 <span class="logo-lg">
-                                    <h1>FileTrakA</h1>
+                                    <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                             </a>
                         </div>
@@ -112,6 +112,11 @@
                             </div>
                         </div>
 
+                        <!-- Notifications -->
+                         <div>
+                            <p><b>NCS48888 <br> UNIT: ACG Office</b> </p>
+                         </div>
+
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,10 +124,11 @@
                                     <img class="rounded-circle header-profile-user"
                                         src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">
-                                            NCS48888</span>
-                                    </span>
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">MB Musa </span>
+                                       
+                                    </span> 
                                 </span>
+
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
@@ -146,19 +152,19 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <h1>FileTrakA</h1>
+                        <img src="assets/images/fileLogo.png" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <h1>FileTrakA</h1>
+                        <img src="assets/images/fileLogo.png" alt="" height="50">
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <h1>FileTrakA</h1>
+                        <img src="assets/images/fileLogo.png" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <h1>FileTrakA</h1>
+                        <img src="assets/images/fileLogo.png" alt="" height="50">
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -175,25 +181,32 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html">
+                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DASHBOARD</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE FILE</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                                <span data-key="t-dashboards">CREATE USER</span>
+                            </a>
+                        </li>
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">FILE TRACKING</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DISPATCH FILES</span>
                             </a>
 
@@ -225,60 +238,145 @@
 
 
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-5 mx-auto">
                                         <div class="card">
                                             <div class="card-header align-items-center d-flex"
                                                 style="background-color: #0b6528;">
                                                 <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Create
                                                     User</h4>
-
                                             </div><!-- end card header -->
                                             <div class="card-body">
                                                 <div class="live-preview">
                                                     <div class="row gy-4">
                                                         <form action="">
                                                             <div class="row row-cols-lg-auto g-3 align-items-center">
-                                                                <div class="col-lg-6">
-                                                                    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Select User
+                                                                        Type</label>
+
+                                                                    <div class="input-group"
+                                                                        style="background-color: #ced4da; padding: 1px; border-radius: 5px;">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"
+                                                                                style="background-color: #eff2f7; border: none;">
+                                                                                <i class="ri-team-line"></i>
+                                                                                <!-- Use any icon here -->
+                                                                            </span>
+                                                                        </div>
+                                                                        <select class="form-select"
+                                                                            id="inlineFormSelectPref"
+                                                                            style="border: none;">
+                                                                            <option selected>Select User Type</option>
+                                                                            <option>Select User Type</option>
+                                                                            <option>Select User Type</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Username</label>
                                                                     <div class="input-group">
-                                                                        <div class="input-group-text"><i class="ri-team-fill"></i></div>
-                                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                                                        <div class="input-group-text"><i
+                                                                                class="ri-user-fill"></i></div>
+                                                                        <input type="text" class="form-control"
+                                                                            id="inlineFormInputGroupUsername"
+                                                                            placeholder="Username">
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Email</label>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-text"><i
+                                                                                class="ri-mail-fill"></i></div>
+                                                                        <input type="email" class="form-control"
+                                                                            id="inlineFormInputGroupUsername"
+                                                                            placeholder="Email">
                                                                     </div>
                                                                 </div><!--end col-->
 
-                                                                <div class="col-lg-6">
-                                                                    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Serive
+                                                                        Number</label>
                                                                     <div class="input-group">
-                                                                        <div class="input-group-text"><i class="ri-user-fill"></i></div>
-                                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                                                        <div class="input-group-text"><i
+                                                                                class="bx bx-id-card"></i></div>
+                                                                        <input type="text" class="form-control"
+                                                                            id="inlineFormInputGroupUsername"
+                                                                            placeholder="Serive Number">
                                                                     </div>
                                                                 </div><!--end col-->
 
-                                                                <div class="col-lg-6">
-                                                                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                                                                    <select class="form-select" id="inlineFormSelectPref">
-                                                                        <option selected>Choose...</option>
-                                                                        <option value="1">One</option>
-                                                                        <option value="2">Two</option>
-                                                                        <option value="3">Three</option>
-                                                                    </select>
-                                                                </div><!--end col-->
-                                                                <div class="col-12">
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-                                                                        <label class="form-check-label" for="inlineFormCheck">
-                                                                            Remember me
-                                                                        </label>
+
+
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Select
+                                                                        Command</label>
+
+                                                                    <div class="input-group"
+                                                                        style="background-color: #ced4da; padding: 1px; border-radius: 5px;">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"
+                                                                                style="background-color: #eff2f7; border: none;">
+                                                                                <i class="ri-building-4-fill"></i>
+                                                                                <!-- Use any icon here -->
+                                                                            </span>
+                                                                        </div>
+                                                                        <select class="form-select"
+                                                                            id="inlineFormSelectPref"
+                                                                            style="border: none;">
+                                                                            <option selected>Select Command</option>
+                                                                            <option>Select Command 1</option>
+                                                                            <option>Select Command 2</option>
+                                                                        </select>
                                                                     </div>
-                                                                </div><!--end col-->
+                                                                </div>
+
+                                                                <div class="col-lg-12">
+                                                                    <label class=""
+                                                                        for="inlineFormInputGroupUsername">Select
+                                                                        Unit</label>
+
+                                                                    <div class="input-group"
+                                                                        style="background-color: #ced4da; padding: 1px; border-radius: 5px;">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"
+                                                                                style="background-color: #eff2f7; border: none;">
+                                                                                <i class="ri-command-line"></i>
+                                                                                <!-- Use any icon here -->
+                                                                            </span>
+                                                                        </div>
+                                                                        <select class="form-select"
+                                                                            id="inlineFormSelectPref"
+                                                                            style="border: none;">
+                                                                            <option selected>Select Unit</option>
+                                                                            <option>Select Unit 1</option>
+                                                                            <option>Select Unit 2</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+
+
+
                                                                 <div class="col-12">
-                                                                    <button class="btn btn-lg btn-success edit-item-btn"
-                                                                    style="background-color: #0b6528;">Create File</button>
+                                                                    <center>
+                                                                        <!-- <div class="mt-4"> -->
+                                                                        <button class="btn btn-success w-100"
+                                                                            type="submit"
+                                                                            style="background-color:#0b6528; color: white;"
+                                                                            onmouseover="this.style.backgroundColor='grey';"
+                                                                            onmouseout="this.style.backgroundColor='#0b6528';">REGISTER</button>
+                                                                        <!-- </div> -->
+                                                                    </center>
                                                                 </div><!--end col-->
                                                             </div><!--end row-->
                                                         </form>
 
-                                                      
+
                                                     </div>
                                                     <!--end row-->
                                                 </div>
@@ -335,7 +433,7 @@
     <div id="preloader">
         <div id="status">
             <div class="spinner-border text-primary avatar-sm" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <span class="">Loading...</span>
             </div>
         </div>
     </div>
