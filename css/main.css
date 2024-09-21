@@ -1,0 +1,132 @@
+
+#file-info {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.file-table th, .file-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.file-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.file-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.file-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.powered-by {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.powered-by p {
+  margin: 0;
+  font-weight: 800;
+  font-size: medium;
+}
+
+.powered-by .credit {
+  text-align: left;
+  margin: 20px 0px 20px 55px;
+  color: black;
+  font-weight: bold;
+}
+
+.powered-by .credit-name {
+  color: black;
+}
+
+.sending-to-label {
+  margin: 20px 0px 20px 0px;
+}
+
+#register-result {
+  margin-top: 20px;
+  color: #d9534f; /* Red color for error messages */
+}
+
+.about {
+  padding-bottom: 20px;
+}
+
+.about .content .who-we-are {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.about .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
+  color: var(--accent-color);
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .content .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.about .content .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.about .content .read-more:hover i {
+  margin-left: 10px;
+}
+
+.about .about-images img {
+  border-radius: 10px;
+}
