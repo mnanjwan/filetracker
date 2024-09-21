@@ -119,8 +119,8 @@
                                     <img class="rounded-circle header-profile-user"
                                         src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
-                                        <span
-                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"> NCS48888</span>
+                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">
+                                            NCS48888</span>
                                     </span>
                                 </span>
                             </button>
@@ -175,25 +175,37 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html">
+                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DASHBOARD</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE FILE</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                                <span data-key="t-dashboards">CREATE USER</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">FILE TRACKING</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DISPATCH FILES</span>
                             </a>
 
@@ -227,47 +239,59 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="card">
-                                            <div class="card-header align-items-center d-flex" style="background-color: #0b6528;">
-                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Create New File</h4>
-                                               
+                                            <div class="card-header align-items-center d-flex"
+                                                style="background-color: #0b6528;">
+                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Create
+                                                    New File</h4>
+
                                             </div><!-- end card header -->
                                             <div class="card-body">
                                                 <div class="live-preview">
                                                     <div class="row gy-4">
                                                         <div class="col-xxl-3 col-md-6">
                                                             <div>
-                                                                <label for="basiInput" class="form-label">File Number</label>
-                                                                <input type="text" class="form-control" id="basiInput" value="NCS-">
+                                                                <label for="basiInput" class="form-label">File
+                                                                    Number</label>
+                                                                <input type="text" class="form-control" id="basiInput"
+                                                                    value="NCS-">
                                                             </div>
                                                         </div>
 
                                                         <div class="col-xxl-3 col-md-6">
                                                             <div>
-                                                                <label for="basiInput" class="form-label">Sending From</label>
-                                                                <input type="text" class="form-control" id="basiInput" value="LEGAL SEAT" readonly>
+                                                                <label for="basiInput" class="form-label">Sending
+                                                                    From</label>
+                                                                <input type="text" class="form-control" id="basiInput"
+                                                                    value="LEGAL SEAT" readonly>
                                                             </div>
                                                         </div>
 
                                                         <div class="col-xxl-3 col-md-6">
                                                             <div>
                                                                 <label for="Sending_To">Sending To</label>
-                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                <select class="form-select mb-3"
+                                                                    aria-label="Default select example">
                                                                     <option selected>Select Unit</option>
                                                                     <option value="DC ADMIN">DC ADMIN</option>
-                                                                    <option value="DC ENFORCEMENT">DC ENFORCEMENT</option>
+                                                                    <option value="DC ENFORCEMENT">DC ENFORCEMENT
+                                                                    </option>
                                                                     <option value="DC REVENUE">DC REVENUE</option>
                                                                     <option value="Oic STATION">Oic STATION</option>
-                                                                    <option value="Create New Unit">Create New Unit</option>
+                                                                    <option value="Create New Unit">Create New Unit
+                                                                    </option>
                                                                 </select>
-                                                                <input type="text" class="form-control" id="basiInput" value="New Unit Name">
+                                                                <input type="text" class="form-control" id="basiInput"
+                                                                    value="New Unit Name">
 
                                                             </div>
                                                         </div>
 
                                                         <div class="col-xxl-3 col-md-6">
                                                             <div>
-                                                                <label for="Precedence_Marking">Precedence Marking</label>
-                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                <label for="Precedence_Marking">Precedence
+                                                                    Marking</label>
+                                                                <select class="form-select mb-3"
+                                                                    aria-label="Default select example">
                                                                     <option selected>Precedence Marking</option>
                                                                     <option value="Immediate">Immediate</option>
                                                                     <option value="Priority">Priority</option>
@@ -279,23 +303,30 @@
                                                         <!--end col-->
                                                         <div class="col-xxl-3 col-md-12">
                                                             <div>
-                                                                <label for="exampleFormControlTextarea5" class="form-label">File Description</label>
-                                                                <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                                                                <label for="exampleFormControlTextarea5"
+                                                                    class="form-label">File Description</label>
+                                                                <textarea class="form-control"
+                                                                    id="exampleFormControlTextarea5"
+                                                                    rows="3"></textarea>
                                                             </div>
                                                         </div>
                                                         <!--end col-->
-                                               
-                                           
+
+
                                                         <!--end col-->
                                                         <div class="edit">
-                                                        <button class="btn btn-lg btn-success edit-item-btn" style="background-color: #0b6528;" >Create File</button>
-                                                    </div>
-                                                        
+                                                            <button class="btn btn-lg btn-success edit-item-btn"
+                                                                style="background-color:#0b6528; color: white;"
+                                                                onmouseover="this.style.backgroundColor='grey';"
+                                                                onmouseout="this.style.backgroundColor='#0b6528';">Create
+                                                                File</button>
+                                                        </div>
+
                                                         <!--end col-->
                                                     </div>
                                                     <!--end row-->
                                                 </div>
-                                               
+
                                             </div>
                                         </div>
                                     </div>
@@ -318,7 +349,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA. Nigeria Customs Service. All rights reserved. Powered by ED Antia psc Assistant Comptroller of Customs
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA. Nigeria Customs
+                            Service. All rights reserved. Powered by ED Antia psc Assistant Comptroller of Customs
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
