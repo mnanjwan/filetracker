@@ -4,6 +4,8 @@
     data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
     data-layout-width="fluid" data-preloader="disable">
 
+</html>
+
 <head>
 
     <meta charset="utf-8" />
@@ -13,6 +15,8 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <!-- Style css -->
+    <!-- Main css -->
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
@@ -38,13 +42,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <!-- MDB -->
     <link rel="stylesheet" href="css/bootstrap-video-carousel.min.css" />
-
-    <!--Swiper slider css-->
-    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Layout config Js -->
-    <!-- <script src="assets/js/layout.js"></script> -->
-    <!-- App Css-->
 
     <style>
         /* Carousel styling */
@@ -83,150 +80,12 @@
         .navbar .nav-link {
           color: #fff !important;
         }
-        .px-4 {
-            padding-right: 1.5rem !important;
-            padding-left: 1.5rem !important;
-        }
-
-        /* Existing video banner CSS (no change needed) */
-        .video-banner {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .video-banner::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Black overlay with 50% opacity */
-            z-index: 0;
-        }
-
-        .video-banner video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            object-fit: cover;
-        }
-
-        /* Banner content styling */
-        .banner-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            z-index: 2;
-            padding: 0 15px;
-        }
-
-        .banner-content h1 {
-            padding-top: 15%;
-            font-size: 6rem;
-            margin-bottom: 10px;
-            /* Reduce margin to bring the <p> tag closer */
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            animation: slideIn 1s ease-out forwards;
-            color: white !important;
-        }
-
-        /* First <p> tag description styling */
-        .banner-content p.description {
-            font-size: 3rem;
-            margin-top: -5px;
-            /* Adjust to make it closer to the h1 */
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 1s;
-            /* Start after the h1 animation */
-        }
-
-        /* Subtext styling */
-        .banner-content p.subtext {
-            font-size: 1.5rem;
-            margin-top: auto;
-            /* Keep this in the same place */
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-            animation-delay: 2s;
-            /* Start after the first p tag */
-        }
-
-        /* Keyframe animation for h1 sliding in */
-        @keyframes slideIn {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Keyframe animation for fading in */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive text sizing */
-        @media (max-width: 768px) {
-            .banner-content h1 {
-                padding-top: 15%;
-                font-size: 3rem;
-            }
-
-            .banner-content p.description,
-            .banner-content p.subtext {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .banner-content h1 {
-                padding-top: 15%;
-                font-size: 2.5rem;
-            }
-
-            .banner-content p.description,
-            .banner-content p.subtext {
-                font-size: 1.5rem;
-            }
-        }
-        
       </style>
 
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+<body>
 
     <!-- Begin page -->
     <div id="layout-wrapper">
@@ -239,19 +98,19 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="40">
+                                    <h1>FileTrakA</h1>
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/fileLogo.png" alt="" height="30">
+                                    <h1>FileTrakA</h1>
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="20">
+                                    <h1>FileTrakA</h1>
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/fileLogo.png" alt="" height="40">
+                                    <h1>FileTrakA</h1>
                                 </span>
                             </a>
                         </div>
@@ -327,9 +186,10 @@
 
                                 <a class="dropdown-item" href="#" id="auth-toggle-link">
                                     <i class="mdi mdi-logout text-muted fs-16 align-middle me-1" id="auth-toggle-icon"></i> 
-                                    <span class="align-middle" id="toggle-instance" data-key="t-logout"></span>
+                                    <span class="align-middle" id="toggle-instance" data-key="t-logout">Logout</span>
                                 </a>
                             </div>
+                        </div>
                         </div>
 
                     </div>
@@ -344,19 +204,19 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="20">
+                        <h1>FileTrakA</h1>
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="40">
+                        <h1>FileTrakA</h1>
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="20">
+                        <h1>FileTrakA</h1>
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="40">
+                        <h1>FileTrakA</h1>
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -373,7 +233,7 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#">
+                            <a class="nav-link menu-link" href="index.html">
                                 <span data-key="t-dashboards">HOME</span>
                             </a>
                         </li>
@@ -385,7 +245,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="help.html">
+                            <a class="nav-link menu-link" href="#">
                                 <span data-key="t-dashboards">HELP</span>
                             </a>
                         </li>
@@ -402,105 +262,91 @@
         <!-- Vertical Overlay-->
         <div class="vertical-overlay"></div>
 
-        <div class="bg-overlay bg-overlay-pattern"></div>
-        <!-- end navbar -->
-        <section class="section">
-            <div class="video-banner">
-                <video autoplay muted loop playsinline>
-                    <source src="assets/images/banner/banner-vid2.mp4" type="video/mp4">
-                </video>
-                <!-- Add an overlay for the opacity effect -->
-                <div class="video-overlay"></div>
+        <!-- About Section -->
+    <section id="about" class="about section">
 
-                <div class="banner-content" style="color: white !important">
-                    <h1  style="color: white !important">FileTrakA</h1>
-                    <p class="description"  style="color: white !important">NCS Electronic File Tracking and Dispatch System</p>
-
-                    <!-- Add subtext -->
-                    <p class="subtext"  style="color: white !important">Powered by: <br>ED ANTIA psc <br>Assistant Comptroller of Customs</p>
-                </div>
+        <div class="container" style="padding: 50px; margin-top: 50px">
+  
+          <div class="">
+  
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+              <p class="who-we-are">About File TrackA</p>
+              <h3>Your Efficient File Management Solution</h3>
+              <p class="fst-italic">
+                File TrackA is a secure web-based system designed to manage physical files within the Nigerian Customs. It ensures only authorized officers can update and track files, making it easier to manage and secure important documents without converting them to electronic formats.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Quickly confirm received files and update their status.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Easily update files as they move to new units within the command.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Search and access file histories with ease using file ID or description.</span></li>
+              </ul>
+              <a href="login.html" class="read-more" style="background: #d7d6d6"><span>Get Started</span><i class="bi bi-arrow-right"></i></a>
             </div>
-
-        </section>
-
-
-        <!-- start wallet -->
-        <section class="section" id="wallet">
-            <div class="container">
-
-                <div class="row g-4">
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <div class="card-body py-5 px-4">
-                                <img src="login.jpg" alt="" height="55" class="mb-3 pb-2">
-                                <h3><a href="login.html" style="color: #0b6528"  id="login-card-link">Login</a></h3>
-                                <p class="text-dark pb-1 fs-13" id="login-description">Get access to your File TrackA dashboard</p>
-                            </div>
-                        </div>
-                    </div><!-- end col -->
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <div class="card-body py-5 px-4">
-                                <img src="#" alt="" height="55" class="mb-3 pb-2">
-                                <h3><a href="#" style="color: #0b6528" id="change-password-card-link">Change Your Password</a></h3>
-                                <p class="text-dark pb-1 fs-13" id="dashboard-description">Change your password securely and easily.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <div class="card-body py-5 px-4">
-                                <img src="#" alt="" height="55" class="mb-3 pb-2">
-                                <h3><a href="#" style="color: #0b6528">Help</a></h3>
-                                <p class="text-dark pb-1 fs-13" id="help-description">Need help? Click here...</p>
-                            </div>
-                        </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section><!-- end wallet -->
-
-
-    <!-- Start footer -->
-    <footer class="custom-footer py-5 position-relative" style="background-color: #0b6528;">
-        <div class="container">
-            <div class="row text-center text-sm-start align-items-center">
-                <div class="col-sm-6">
-                    <div>
-                        <p class="copy-rights mb-0" style="color: white;">
-                            <script> document.write(new Date().getFullYear()) </script> © FileTrakA. <br> Nigeria
-                            Customs
-                            Service. <br> All rights reserved. <br> Powered by ED Antia psc <br> Assistant Comptroller of
-                            Customs
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-sm-end mt-3 mt-sm-0">
-                        <ul class="list-inline mb-0 footer-social-link">
-                            <li class="list-inline-item">
-                                <a href="#" class="avatar-xs d-block">
-                                    <div class="avatar-title rounded-circle">
-                                        <span style="color: white;">FAQ</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  
+          </div>
+  
         </div>
-    </footer>
-    <!-- end footer -->
+      </section><!-- /About Section -->
+  
+    
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section" style="background: f8f9fa;">
+      <div class="container" style="background: f8f9fa;">
+        <div class="row gy-4">
+          <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <h4 class="title"><a href="login.html" class="stretched-link">Login</a></h4>
+                <p class="description">Get access to your File TrackA dashboard</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h4 class="title"><a href="change-password.html" class="stretched-link">Change your password</a></h4>
+                <p class="description">Change your password securely and easily</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div>
+                <h4 class="title"><a href="help.html" class="stretched-link">Help</a></h4>
+                <p class="description">Need help? We’ve got you covered. Click here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    
+    <section id="featured-services" class="featured-services section" style="background: #f8f9fa;">
+      <div class="container" style="background: #f8f9fa;">
+        <div class="powered-by">
+              <p>Powered by ED Antia psc</p>
+              <p>Assistant Comptroller of Customs</p>
+              <p>07037610726, 08080800700</p>
+              <div style="text-align: center">
+                  <p>Credits:</p>
+                  <p class="credit-name">Comptroller EJ Edelduok</p>
+                  <p class="credit-name">Comptroller IK Oladeji</p>
+                  <p class="credit-name">Assistant Comptroller RI Eya</p>
+                </div>
+              <p class="copyright">© 2024 Nigeria Customs Service. All rights reserved.</p>
+      </div>
+          
+      </div>
+    </section>
 
+        <!-- end main content-->
 
-
-    <!--start back-to-top-->
-    <button onclick="topFunction()" class="btn btn-danger btn-icon landing-back-top" id="back-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </button>
-    <!--end back-to-top-->
     </div>
     <!-- END layout-wrapper -->
 
@@ -549,15 +395,11 @@
             }
     
             // Select the logout/auth button
-            // Update user profile info
-            const serviceNumberElement = document.getElementById('serviceNumber');
-            const departmentElement = document.getElementById('department');
-            const usernameElement = document.getElementById('user-profile-name')
             // const authButton = document.getElementById('auth-button');
-            const loginCardLink = document.getElementById('login-card-link');
-            const changePasswordCardLink = document.getElementById('change-password-card-link');
-            const loginDescriptionText = document.getElementById('login-description');
-            const dashboardDescriptiontext = document.getElementById('dashboard-description');
+            // const loginCardLink = document.getElementById('login-card-link');
+            // const changePasswordCardLink = document.getElementById('change-password-card-link');
+            // const loginDescriptionText = document.getElementById('login-description');
+            // const dashboardDescriptiontext = document.getElementById('dashboard-description');
             const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
             const authToggleLink = document.getElementById('auth-toggle-link');
             const authToggleIcon = document.getElementById('auth-toggle-icon');
@@ -566,9 +408,6 @@
             // Check for user data in localStorage
             let userData = JSON.parse(localStorage.getItem("userData"));
             const token = userData?.token;
-
-            console.log("userData: ", userData)
-            console.log("Token: ", userData?.token)
     
             if (!token || token === undefined) {
                 // If no token, clear all localStorage items and exit
@@ -578,21 +417,7 @@
                 authToggleIcon.className = "mdi mdi-login text-muted fs-16 align-middle me-1";
                 authToggleLink.href = "login.html"; // Redirect to login page
                 authToggleLink.removeEventListener("click", handleLogout);
-                loginCardLink.removeEventListener("click", handleLogout);
                 return;
-            } else {
-                toggleInstance.textContent = "Logout";
-                loginCardLink.textContent = "Logout";
-                loginDescriptionText.textContent = "Click here to logout";
-                loginCardLink.href = "#";
-                toggleInstance.href = '#'
-                authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
-                authToggleLink.href = "#"; // Redirect to login page
-                authToggleLink.removeEventListener("click", handleLogout);
-                loginCardLink.removeEventListener("click", handleLogout);
-                changePasswordCardLink.textContent = "Dashboard";
-                changePasswordCardLink.href = "dashboard.html";
-                dashboardDescriptiontext.textContent = "Access Dashboard"
             }
     
             // Validate the token by hitting the /user/profile endpoint
@@ -624,6 +449,10 @@
                 try {
                     console.log('User is logged in. Updating UI...');
                     
+                    // Update user profile info
+                    const serviceNumberElement = document.getElementById('serviceNumber');
+                    const departmentElement = document.getElementById('department');
+                    const usernameElement = document.getElementById('user-profile-name')
     
                     // Set the service number and department if they exist
                     if (userData.serviceNumber) {
@@ -631,15 +460,9 @@
                         welcomeLoginMessage.textContent = `Welcome ${userData.serviceNumber}!`
 
                         toggleInstance.textContent = "Logout";
-                        loginCardLink.textContent = "Logout";
-                        loginCardLink.href = "#";
                         authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
                         authToggleLink.href = "#"; // Prevent default link behavior
                         authToggleLink.addEventListener("click", handleLogout);
-                        loginCardLink.addEventListener("click", handleLogout);
-                        changePasswordCardLink.textContent = "Dashboard";
-                        changePasswordCardLink.href = "dashboard.html";
-                        dashboardDescriptiontext.textContent = "Access Dashboard"
                     } else {
                         serviceNumberElement.textContent = "";
                         welcomeLoginMessage.textContent = ""
@@ -691,8 +514,6 @@
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
 
-    <script src="assets/js/pages/nft-landing.init.js"></script>
-
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 
@@ -712,8 +533,6 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
-
-    <script src="assets/js/pages/nft-landing.init.js"></script>
 </body>
 
 

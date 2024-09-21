@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Management - Files</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	  <!-- Bootstrap CSS -->
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	  <!-- Themify Icons -->
+	  <link rel="stylesheet" href="css/themify-icons.css">
+	  <!-- Owl carousel -->
+	  <link rel="stylesheet" href="css/owl.carousel.min.css">
+	  <!-- Main css -->
+	  <link href="css/style.css" rel="stylesheet">
+    <style>
+      /* Table Styling */
+      .file-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .file-table th,
+      .file-table td {
+          text-align: left;
+          padding: 12px;
+          border: 1px solid #ddd;
+          font-size: 16px;
+          word-wrap: break-word;
+      }
+
+      .file-table th {
+          background-color: #4CAF50;
+          color: white;
+          font-weight: bold;
+      }
+
+      .file-table td {
+          background-color: #f9f9f9;
+      }
+
+      /* Alternating row colors for better readability */
+      .file-table tr:nth-child(even) {
+          background-color: #f2f2f2;
+      }
+
+      /* Responsive Table */
+      @media screen and (max-width: 768px) {
+          .file-table, .file-table thead, .file-table tbody, .file-table th, .file-table td, .file-table tr {
+              display: block;
+          }
+
+          .file-table tr {
+              margin-bottom: 15px;
+              border: 1px solid #ddd;
+              padding: 10px;
+          }
+
+          .file-table th {
+              position: absolute;
+              top: -9999px;
+              left: -9999px;
+          }
+
+          .file-table td {
+              position: relative;
+              padding-left: 50%;
+              text-align: left;
+              border: none;
+          }
+
+          .file-table td:before {
+              content: attr(data-label);
+              position: absolute;
+              left: 15px;
+              font-weight: bold;
+              color: #333;
+          }
+      }
+
+      /* Add table header text for mobile devices */
+      .file-table td[data-label]:before {
+          font-weight: bold;
+          color: #4CAF50;
+      }
+    </style>
+</head>
+<body>
+  
+  <!-- Navigation Links -->
+  <div style="width: 100%; top: 0;" id="navbar-container"></div>
+  <div class="form-container">
+    <h1>Search Files</h1>
+    <form id="search-file-form">
+      <select id="search-type">
+        <option value="file_id">Search by File ID</option>
+        <option value="description">Search by Description</option>
+      </select>
+      <input type="text" id="file-id" placeholder="Enter File ID or Description" required>
+  
+      <div id="date-range-fields">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date">
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date">
+      </div>
+  
+      <button type="submit">Search</button>
+  
+      <div class="powered-by">
+        <p>Powered by ED Antia psc</p>
+        <p>Assistant Comptroller of Customs</p>
+        <p class="copyright">© 2024 Nigeria Customs Service. All rights reserved.</p>
+      </div>
+    </form>
+    <div id="file-info"></div>
+  </div>
+  <script>
+    // Function to handle the logout process
+    function handleLogout() {
+        var userConfirmed = confirm("Are you sure you want to logout?");
+
+        if (userConfirmed) {
+            // Clear all localStorage items
+            localStorage.clear();
+
+            // Redirect to /logout route
+            window.location.href = '/index.html';
+        }
+    }
+</script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let userData = JSON.parse(localStorage.getItem("userData"));
+        
+        if (!userData || !userData?.userType) {
+            console.error("User data not found or invalid in localStorage.");
+            return;
+        }
+
+        // Determine the navbar file to load based on userType
+        let navbarFile = userData?.userType === 'admin' ? 'admin-nav.html' : 'service-men-nav.html';
+
+        // Fetch and insert the appropriate navbar HTML
+        fetch(navbarFile)
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML
+                document.getElementById('navbar-container').innerHTML = data;
+        
+                // Determine the current page URL
+                const currentPath = window.location.pathname.split('/').pop(); // Get the current page file name
+        
+                // Select the nav links
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                // Add 'active' class to the current link
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error loading the navbar:", error);
+            });
+    });
+</script>
+</body>
+</html>

@@ -4,7 +4,6 @@
     data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
     data-layout-width="fluid" data-preloader="disable">
 
-</html>
 
 <head>
 
@@ -14,6 +13,9 @@
     <meta content="FileTrakA" name="description" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Style css -->
+    <!-- Main css -->
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
@@ -31,6 +33,90 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/bootstrap-video-carousel.min.css" />
+
+    <style>
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+          height: 100vh;
+        }
+  
+        .carousel-item:nth-child(1) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        .carousel-item:nth-child(2) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        .carousel-item:nth-child(3) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #introCarousel {
+            margin-top: -58.59px;
+          }
+        }
+  
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+
+        .btn-success, .bg-success, .avatar-sm{
+            background-color: #0F7745 !important;
+            transform: none !important;
+        }
+        a {
+            color: #000 !important;
+        }
+        .btn-success:hover {
+            padding: 5px 10px;
+            background-color: #0F7745;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-success:active, .btn-success:focus {
+            background-color: #0F7745;
+            outline: none !important;
+            transition: none !important;
+            transform: none !important;
+        }
+
+        .recieve-file-btn-success {
+            background-color: #0F7745 !important;
+            outline: none !important;
+            transition: none !important;
+            transform: none !important;
+            border-radius: 5px;
+            color: white;
+            padding: 3px;
+        }
+
+        .recieve-file-btn-success:hover {
+            padding: 5px 10px;
+            background-color: #0F7745;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+      </style>
 
 
 </head>
@@ -48,19 +134,19 @@
                         <div class="navbar-brand-box horizontal-logo">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="40">
                                 </span>
                                 <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="30">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="20">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="40">
                                 </span>
                             </a>
                         </div>
@@ -113,9 +199,9 @@
                         </div>
 
                         <!-- Notifications -->
-                         <div>
-                            <p><b>NCS48888 <br> UNIT: ACG Office</b> </p>
-                         </div>
+                        <div id="user-profile-info">
+                            <p><b id="serviceNumber"></b> <br><span id="department"></span></p>
+                        </div>
 
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
@@ -124,7 +210,7 @@
                                     <img class="rounded-circle header-profile-user"
                                         src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
                                     <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">MB Musa </span>
+                                        <span id="user-profile-name" class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"></span>
                                        
                                     </span> 
                                 </span>
@@ -132,11 +218,12 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
-                                <h6 class="dropdown-header">Welcome NCS48888!</h6>
+                                <h6 id="welcome-message-service-number" class="dropdown-header"></h6>
 
-                                <a class="dropdown-item" href="auth-logout-basic.html"><i
-                                        class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle" data-key="t-logout">Logout</span></a>
+                                <a class="dropdown-item" href="#" id="auth-toggle-link">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1" id="auth-toggle-icon"></i> 
+                                    <span class="align-middle" id="toggle-instance" data-key="t-logout">Logout</span>
+                                </a>
                             </div>
                         </div>
 
@@ -152,19 +239,19 @@
                 <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                        <img src="assets/images/fileLogo.png" alt="" height="20">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                        <img src="assets/images/fileLogo.png" alt="" height="40">
                     </span>
                 </a>
                 <!-- Light Logo-->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                        <img src="assets/images/fileLogo.png" alt="" height="20">
                     </span>
                     <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                        <img src="assets/images/fileLogo.png" alt="" height="40">
                     </span>
                 </a>
                 <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -181,32 +268,32 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="#">
                                 <span data-key="t-dashboards">DASHBOARD</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_file.html">
                                 <span data-key="t-dashboards">CREATE FILE</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_user.html">
                                 <span data-key="t-dashboards">CREATE USER</span>
                             </a>
                         </li>
                         
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="file_tracking.html">
                                 <span data-key="t-dashboards">FILE TRACKING</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="dispatch_file.html">
                                 <span data-key="t-dashboards">DISPATCH FILES</span>
                             </a>
 
@@ -230,10 +317,18 @@
 
             <div class="page-content">
                 <div class="container-fluid">
+
                     <div class="row">
                         <div class="col">
+
                             <div class="h-100">
+
+
                                 <div class="row">
+
+
+                                  
+
                                     <div class="col-xl-3 col-md-6">
                                         <!-- card -->
                                         <div class="card card-animate">
@@ -242,13 +337,13 @@
                                                     <div class="flex-grow-1 overflow-hidden">
                                                         <p
                                                             class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Command/ Department</p>
+                                                            Command / Department</p>
                                                     </div>
 
                                                 </div>
                                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                                     <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">HQTRS </h4>
+                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4" id="command_name"></h4>
                                                     </div>
                                                     <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success rounded fs-3">
@@ -274,7 +369,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                                     <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">20 </h4>
+                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4" id="unit_created_files_count"></h4>
                                                     </div>
                                                     <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success rounded fs-3">
@@ -301,7 +396,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                                     <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">26 </h4>
+                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4" id="received-file-count"></h4>
                                                     </div>
                                                     <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success rounded fs-3">
@@ -327,7 +422,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-end justify-content-between mt-4">
                                                     <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">43 </h4>
+                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4" id="unreceived-file-count"></h4>
                                                     </div>
                                                     <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success rounded fs-3">
@@ -349,7 +444,7 @@
                                                 <div class="col-sm">
                                                     <div class="d-flex justify-content-sm-end">
                                                         <div class="search-box ms-2">
-                                                            <input type="text" class="form-control search"
+                                                            <input type="text" id="search-box" class="form-control search"
                                                                 placeholder="Search by ID or Description">
                                                             <i class="ri-search-line search-icon"></i>
                                                         </div>
@@ -358,7 +453,7 @@
 
                                             </div><!-- end card header -->
 
-                                            <div class="card-body">
+                                            <div id="unreceived-files" class="card-body">
                                                 <div class="listjs-table" id="customerList">
 
                                                     <div class="table-responsive table-card mt-3 mb-1">
@@ -395,17 +490,17 @@
                                                                             href="javascript:void(0);"
                                                                             class="fw-medium link-primary">#VZ2101</a>
                                                                     </td>
-                                                                    <td class="customer_name">ACG Office</td>
-                                                                    <td class="email">NCS\HQTRS\452</td>
-                                                                    <td class="phone">testing</td>
-                                                                    <td class="date">9/17/2024, 6:25:40 AM</td>
+                                                                    <td class="customer_name"></td>
+                                                                    <td class="email"></td>
+                                                                    <td class="phone"></td>
+                                                                    <td class="date"></td>
                                                                     <td>
                                                                         <div class="d-flex gap-2">
                                                                             <div class="edit">
                                                                                 <button
-                                                                                    class="btn btn-sm "
-                                                                                    style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';"
-                                                                                    data-bs-target="#showModal">Receive</button>
+                                                                                class="btn btn-sm "
+                                                                                style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';"
+                                                                                    data-bs-target="#showModal"></button>
                                                                             </div>
 
                                                                         </div>
@@ -413,17 +508,17 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                      
                                                     </div>
 
                                                     <div class="d-flex justify-content-end">
-                                                        <div class="pagination-wrap hstack gap-2">
+                                                        <div class="pagination-wrap hstack gap-2"
+                                                            style="display: none;">
                                                             <a class="page-item pagination-prev disabled"
                                                                 href="javascript:void(0);">
                                                                 Previous
                                                             </a>
                                                             <ul class="pagination listjs-pagination mb-0">
-                                                                <li class=""><a class="page" href="#" data-i="1"
+                                                                <li class="active"><a class="page" href="#" data-i="1"
                                                                         data-page="8">1</a></li>
                                                             </ul>
                                                             <a class="page-item pagination-next disabled"
@@ -534,7 +629,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA. Nigeria Customs Service. All rights reserved. Powered by ED Antia psc Assistant Comptroller of Customs
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
@@ -1012,28 +1107,367 @@
 
 
     <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle logout function
+            function handleLogout(event) {
+                event.preventDefault(); // Prevent default anchor action
+                console.log('Logout button clicked'); // Debug log to confirm click event
+    
+                // Show confirmation dialog
+                const userConfirmed = window.confirm("Are you sure you want to log out?");
+    
+                if (userConfirmed) {
+                    console.log('User confirmed logout');
+                    
+                    // Clear all localStorage items
+                    localStorage.clear();
+                    console.log("Local storage cleared. User logged out.");
+    
+                    // Redirect to index page
+                    window.location.href = "index.html"; 
+                } else {
+                    console.log("Logout canceled by the user.");
+                }
+            }
+    
+            // Select the logout/auth button
+            // Update user profile info
+            const serviceNumberElement = document.getElementById('serviceNumber');
+            const departmentElement = document.getElementById('department');
+            const usernameElement = document.getElementById('user-profile-name')
+            // const authButton = document.getElementById('auth-button');
+            // const loginCardLink = document.getElementById('login-card-link');
+            // const changePasswordCardLink = document.getElementById('change-password-card-link');
+            // const loginDescriptionText = document.getElementById('login-description');
+            // const dashboardDescriptiontext = document.getElementById('dashboard-description');
+            const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
+            const authToggleLink = document.getElementById('auth-toggle-link');
+            const authToggleIcon = document.getElementById('auth-toggle-icon');
+            const toggleInstance = document.getElementById('toggle-instance');
+    
+            // Check for user data in localStorage
+            let userData = JSON.parse(localStorage.getItem("userData"));
+            const token = userData?.token;
+
+            console.log("userData: ", userData)
+            console.log("Token: ", userData?.token)
+    
+            if (!token || token === undefined) {
+                // If no token, clear all localStorage items and exit
+                localStorage.clear();
+
+                toggleInstance.textContent = "Login";
+                authToggleIcon.className = "mdi mdi-login text-muted fs-16 align-middle me-1";
+                authToggleLink.href = "login.html"; // Redirect to login page
+                window.location.href = "./index.html";
+                authToggleLink.removeEventListener("click", handleLogout);
+                return;
+            } else {
+                toggleInstance.textContent = "Logout";
+                authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
+                authToggleLink.href = "#"; // Redirect to login page
+                authToggleLink.removeEventListener("click", handleLogout);
+            }
+    
+            // Validate the token by hitting the /user/profile endpoint
+            fetch("/user/profile", {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.log('Invalid token, logging out:', response);
+                    localStorage.clear();
+                    window.location.href = "index.html";
+                    return;
+                }
+                return response.json();
+            })
+            .then(profileData => {
+                console.log("Profile Data:", profileData);
+                document.getElementById("command_name").textContent = profileData.command_name;
+                document.getElementById("unit_created_files_count").textContent = profileData.fileOriginatedCount;
+                document.getElementById("received-file-count").textContent = profileData.receivedFileCount;
+                document.getElementById("received-file-count").textContent = profileData.receivedFileCount;
+                document.getElementById("unreceived-file-count").textContent = profileData.unreceivedFileCount;
+            })
+            .catch(error => {
+                localStorage.clear();
+                console.error("Error fetching profile data:", error);
+            });
+    
+            // If userData exists, update UI for logged-in state
+            if (userData) {
+                try {
+                    console.log('User is logged in. Updating UI...');
+                    
+    
+                    // Set the service number and department if they exist
+                    if (userData.serviceNumber) {
+                        serviceNumberElement.textContent = userData.serviceNumber;
+                        welcomeLoginMessage.textContent = `Welcome ${userData.serviceNumber}!`
+
+                        toggleInstance.textContent = "Logout";
+                        authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
+                        authToggleLink.href = "#"; // Prevent default link behavior
+                        authToggleLink.addEventListener("click", handleLogout);
+                    } else {
+                        serviceNumberElement.textContent = "";
+                        welcomeLoginMessage.textContent = ""
+                    }
+    
+                    if (userData.department) {
+                        departmentElement.textContent = `UNIT: ${userData.department}`;
+                    } else {
+                        departmentElement.textContent = "";
+                    }
+                    if (userData.username) {
+                        usernameElement.textContent = userData.username
+                    } else {
+                        usernameElement.textContent = ""
+                    }
+    
+                    // Change button to "LOG OUT"
+                    // authButton.textContent = "LOG OUT";
+                    // authButton.href = "#"; // Prevent default link behavior
+                    // authButton.addEventListener("click", handleLogout); // Attach logout handler
+                    // loginCardLink.addEventListener("click", handleLogout); 
+    
+                    // Change Login card to "Logout"
+                    // loginCardLink.textContent = "Logout";
+                    // loginDescriptionText.textContent = "Click here to logout";
+                    // dashboardDescriptiontext.textContent = "Access Dashboard";
+                    // loginCardLink.href = "#"; // Prevent default link behavior
+    
+                    // Change "Change your password" card to "Dashboard"
+                    // changePasswordCardLink.textContent = "Dashboard";
+                    // changePasswordCardLink.href = "dashboard.html"; // Link to dashboard page
+
+                    // Initialize EventSource to listen for new unreceived files
+
+
+
+                    // Store initial unreceived files
+                    let initialFileData = userData.unreceivedFileData.slice();
+                    let currentFileData = initialFileData.slice(); // Copy for real-time updates
+                    displayUnreceivedFiles(currentFileData);
+
+                    // Search files based on file_id or description
+                    document.getElementById("search-box").addEventListener("keyup", searchFiles);
+
+                    function searchFiles() {
+                        const searchQuery = document.getElementById("search-box").value.toLowerCase();
+                        const filteredFiles = currentFileData.filter(file =>
+                            file.file_id.toLowerCase().includes(searchQuery) ||
+                            (file.description && file.description.toLowerCase().includes(searchQuery))
+                        );
+                        console.log(filteredFiles)
+                        return displayUnreceivedFiles(filteredFiles);
+                    }
+
+                    // Initialize EventSource to listen for new unreceived files
+                    const commandId = userData.command_id;
+                    const department = userData.department;
+
+                    const eventSource = new EventSource(`/stream/unreceived-files?command_id=${commandId}&department=${department}`);
+
+                    eventSource.onopen = () => {
+                        console.log("Connection opened.");
+                    };
+
+                    eventSource.onmessage = (event) => {
+                        console.log("New message received:", event.data);
+                        const unreceivedFileData = JSON.parse(event.data);
+
+                        // Update current file data
+                        currentFileData = unreceivedFileData.data.slice();
+                        document.getElementById("unreceived-file-count").textContent = unreceivedFileData.count;
+
+                        // Alert for new files only if they are not already in the initial list
+                        const changedFiles = currentFileData.filter(newFile => {
+                            return !initialFileData.some(initialFile => initialFile.file_id === newFile.file_id);
+                        });
+
+                        if (changedFiles.length > 0) {
+                            changedFiles.forEach(file => {
+                                alert(`You Have Received File ID: ${file.file_id} With File Description: ${file.description || 'No description'}`);
+                            });
+                        }
+
+                        // Update initial file data to the latest state
+                        initialFileData = currentFileData.slice();
+
+                        // Update userData and localStorage
+                        userData.unreceivedFileData = currentFileData;
+                        userData.unreceivedFileCount = unreceivedFileData.count;
+                        localStorage.setItem("userData", JSON.stringify(userData));
+
+                        // Display the current files
+                        displayUnreceivedFiles(currentFileData);
+                    };
+
+                    eventSource.onerror = (error) => {
+                        console.error("Error in receiving updates:", error);
+                        eventSource.close();
+                    };
+
+                    // Function to display unreceived files in table format
+                    function displayUnreceivedFiles(files) {
+                        const container = document.getElementById("customerList");
+                        const tableBody = document.querySelector("#customerTable tbody");
+
+                        if (files.length === 0) {
+                            container.innerHTML = `
+                                <div class="noresult">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json"
+                                            trigger="loop" colors="primary:#121331,secondary:#08a88a"
+                                            style="width:75px;height:75px">
+                                        </lord-icon>
+                                        <h5 class="mt-2">You Do Not Have Any Unreceived Files</h5>
+                                        <p class="text-muted mb-0">There are no unreceived files at the moment.</p>
+                                    </div>
+                                </div>
+                            `;
+                            return;
+                        }
+
+                        tableBody.innerHTML = files.map(file => `
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
+                                    </div>
+                                </th>
+                                <td class="customer_name">${file.current_location}</td>
+                                <td class="email">${file.file_id}</td>
+                                <td class="phone">${file.description}</td>
+                                <td class="date">${new Date(file.timestamp).toLocaleString()}</td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <div class="edit">
+                                            <button class="btn-sm  recieve-file-btn-success"
+                                                    onclick="receiveFile('${file.file_id}', '${file.timestamp}', '${file.sending_to}')">Receive</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        `).join("");
+                    }
+
+                // Function to handle receiving a file
+                window.receiveFile = function (fileId, timestamp, sendingTo) {
+                        const confirmReceive = confirm("Are you sure you have received this file?");
+                        if (confirmReceive) {
+                            fetch(`/files/receive-file`, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    fileId: fileId,
+                                    timestamp: timestamp,
+                                    sendingTo: sendingTo,
+                                    serviceNumber: userData.serviceNumber
+                                })
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    // Refresh the list of unreceived files
+                                    fetch("/api/unreceivedfiles", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify({ commandId, department })
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.success) {
+                                            // Update user data and localStorage
+                                            userData.unreceivedFileData = data.unreceivedFileData;
+                                            userData.unreceivedFileCount = data.unreceivedFileCount;
+                                            localStorage.setItem("userData", JSON.stringify(userData));
+                    
+                                            // Update currentFileData and display files
+                                            initialFileData = userData.unreceivedFileData.slice();
+                                            currentFileData = initialFileData.slice();
+                                            displayUnreceivedFiles(currentFileData);
+                                            document.getElementById("unreceived-file-count").textContent = userData.unreceivedFileCount;
+                                            
+                                            // After updating unreceived files, call /user/profile to get the latest counts
+                                            fetch("/user/profile", {
+                                                method: "GET",
+                                                headers: {
+                                                    "Authorization": `Bearer ${userData.token}`
+                                                }
+                                            })
+                                            .then(profileResponse => profileResponse.json())
+                                            .then(profileData => {
+                                                // Update user data and localStorage with new profile data
+                                                localStorage.setItem("userData", JSON.stringify(profileData));
+                    
+                                                // Update the file counts
+                                                document.getElementById("unreceived-file-count").textContent = profileData.unreceivedFileCount;
+                                                document.getElementById("unit_created_files").textContent = profileData.fileOriginatedCount;
+                                                document.getElementById("received_files").textContent = profileData.receivedFileCount;
+                                                document.getElementById("command_name").textContent = profileData.command_name;
+                                                document.getElementById("unit_created_files_count").textContent = profileData.fileOriginatedCount;
+                                                document.getElementById("received-file-count").textContent = profileData.receivedFileCount;
+                                                document.getElementById("received-file-count").textContent = profileData.receivedFileCount;
+                                                document.getElementById("unreceived-file-count").textContent = profileData.unreceivedFileCount;
+                    
+                                                console.log("Profile updated with latest counts after receiving file.");
+                                            })
+                                            .catch(error => console.error("Error fetching updated profile:", error));
+                    
+                                        } else {
+                                            alert("Error refreshing unreceived files.");
+                                        }
+                                    })
+                                    .catch(error => console.error("Error refreshing unreceived files:", error));
+                    
+                                } else {
+                                    alert("Error marking file as received.");
+                                }
+                            })
+                            .catch(error => console.error("Error receiving file:", error));
+                        }
+                    };
+    
+                } catch (error) {
+                    console.error("Error parsing userData:", error);
+                }
+            } else {
+                console.log("No userData found in localStorage. Showing LOG IN button.");
+                // If not logged in, show "LOG IN" button
+                authButton.textContent = "LOG IN";
+                authButton.href = "./index.html"; // Redirect to login page
+                authButton.removeEventListener("click", handleLogout); // Remove logout handler
+            }
+        });
+    </script>
+    
+    
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
+    
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <!-- Vector map-->
-    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-
-    <!--Swiper slider js-->
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Dashboard init -->
-    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
 </body>
 
 

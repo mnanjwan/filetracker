@@ -4,16 +4,15 @@
     data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
     data-layout-width="fluid" data-preloader="disable">
 
-</html>
-
 <head>
 
     <meta charset="utf-8" />
-    <title>FileTrakA - Dispatch File </title>
+    <title>FileTrakA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="FileTrakA" name="description" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Style css -->
 
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
@@ -31,6 +30,53 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/bootstrap-video-carousel.min.css" />
+
+    <style>
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+          height: 100vh;
+        }
+  
+        .carousel-item:nth-child(1) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        .carousel-item:nth-child(2) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        .carousel-item:nth-child(3) {
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+  
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #introCarousel {
+            margin-top: -58.59px;
+          }
+        }
+  
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+      </style>
 
 
 </head>
@@ -40,348 +86,20 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-        <header id="page-topbar">
-            <div class="layout-width">
-                <div class="navbar-header">
-                    <div class="d-flex">
-                        <!-- LOGO -->
-                        <div class="navbar-brand-box horizontal-logo">
-                            <a href="index.html" class="logo logo-dark">
-                                <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
-                                </span>
-                                <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
-                                </span>
-                            </a>
 
-                            <a href="index.html" class="logo logo-light">
-                                <span class="logo-sm">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/fileLogo.png" alt="" height="50">
-                                </span>
-                            </a>
-                        </div>
-
-                        <button type="button"
-                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none"
-                            id="topnav-hamburger-icon">
-                            <span class="hamburger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-
-                        <!-- App Search-->
-                        <form class="app-search d-none d-md-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off"
-                                    id="search-options" value="">
-                                <span class="mdi mdi-magnify search-widget-icon"></span>
-                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
-                                    id="search-close-options"></span>
-                            </div>
-
-                        </form>
-                    </div>
-
-                    <div class="d-flex align-items-center">
-
-                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
-                            <button type="button"
-                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
-                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <i class="bx bx-search fs-22"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                                aria-labelledby="page-header-search-dropdown">
-                                <form class="p-3">
-                                    <div class="form-group m-0">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search ..."
-                                                aria-label="Recipient's username">
-                                            <button class="btn btn-primary" type="submit"><i
-                                                    class="mdi mdi-magnify"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- Notifications -->
-                         <div>
-                            <p><b>NCS48888 <br> UNIT: ACG Office</b> </p>
-                         </div>
-
-                        <div class="dropdown ms-sm-3 header-item topbar-user">
-                            <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="d-flex align-items-center">
-                                    <img class="rounded-circle header-profile-user"
-                                        src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                    <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">MB Musa </span>
-                                       
-                                    </span> 
-                                </span>
-
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
-                                <h6 class="dropdown-header">Welcome NCS48888!</h6>
-
-                                <a class="dropdown-item" href="auth-logout-basic.html"><i
-                                        class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                                        class="align-middle" data-key="t-logout">Logout</span></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- ========== App Menu ========== -->
-        <div class="app-menu navbar-menu">
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-                <!-- Dark Logo-->
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
-                    </span>
-                </a>
-                <!-- Light Logo-->
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
-                    </span>
-                </a>
-                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
-                    id="vertical-hover">
-                    <i class="ri-record-circle-line"></i>
-                </button>
-            </div>
-
-            <div id="scrollbar">
-                <div class="container-fluid">
-
-                    <div id="two-column-menu">
-                    </div>
-                    <ul class="navbar-nav" id="navbar-nav">
-                        <li class="menu-title"><span data-key="t-menu">Menu</span></li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
-                                <span data-key="t-dashboards">DASHBOARD</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
-                                <span data-key="t-dashboards">CREATE FILE</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
-                                <span data-key="t-dashboards">CREATE USER</span>
-                            </a>
-                        </li>
-                        
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
-                                <span data-key="t-dashboards">FILE TRACKING</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
-                                <span data-key="t-dashboards">DISPATCH FILES</span>
-                            </a>
-
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- Sidebar -->
-            </div>
-
-            <div class="sidebar-background"></div>
-        </div>
+        <!-- Navigation Links -->
+        <div style="width: 100%; top: 0;" id="navbar-container"></div>
+        
         <!-- Left Sidebar End -->
         <!-- Vertical Overlay-->
         <div class="vertical-overlay"></div>
-
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="main-content">
-
-            <div class="page-content">
-                <div class="container-fluid">
-
-                    <div class="row">
-                        <div class="col">
-
-                            <div class="h-100">
-
-
-                                <div class="row">
-                                    <div class="col-lg-5 mx-auto">
-                                        <div class="card">
-                                            <div class="card-header align-items-center d-flex"
-                                                style="background-color: #0b6528;">
-                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Dispatch File</h4>
-
-                                            </div><!-- end card header -->
-                                            <div class="card-body">
-                                                <div class="live-preview">
-                                                    <div class="row gy-4">
-                                                       
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <select class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Search By File ID</option>
-                                                                    <option>Search By Description</option>
-                                                                </select>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    placeholder="Enter File ID or Description">
-
-                                                            </div>
-                                                        </div>
-
-                                                       
-                                                        <!--end col-->
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="exampleFormControlTextarea5"
-                                                                    class="form-label">Start Date</label>
-                                                                    <input type="date" class="form-control" id="start_date">
-                                                            </div>
-                                                            <!-- <div>
-                                                                <label for="exampleFormControlTextarea5"
-                                                                    class="form-label">End Date</label>
-                                                                    <input type="date" class="form-control" id="start_date">
-                                                            </div> -->
-                                                        </div>
-                                                        <!--end col-->
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                          
-                                                                <label for="exampleFormControlTextarea5"
-                                                                    class="form-label">End Date</label>
-                                                                    <input type="date" class="form-control" id="start_date">
-                                                            </div>
-                                                        </div>
-                                                        <!--end col-->
-
-
-                                                        <!--end col-->
-                                                        <div class="edit">
-                                                            <button class="btn btn-lg "
-                                                                style="background-color:#0b6528; color: white;"
-                                                                onmouseover="this.style.backgroundColor='grey';"
-                                                                onmouseout="this.style.backgroundColor='#0b6528';">Search</button>
-                                                        </div>
-
-
-                                                        <hr>
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="basiInput" class="form-label">File
-                                                                    Number</label>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="basiInput" class="form-label">Sending
-                                                                    From</label>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="LEGAL SEAT" readonly>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="Sending_To">Sending To</label>
-                                                                <select class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Unit</option>
-                                                                    <option value="DC ADMIN">DC ADMIN</option>
-                                                                    <option value="DC ENFORCEMENT">DC ENFORCEMENT
-                                                                    </option>
-                                                                    <option value="DC REVENUE">DC REVENUE</option>
-                                                                    <option value="Oic STATION">Oic STATION</option>
-                                                                    </option>
-                                                                </select>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="Precedence_Marking">Precedence
-                                                                    Marking</label>
-                                                                <select class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Precedence Marking</option>
-                                                                    <option value="Immediate">Immediate</option>
-                                                                    <option value="Priority">Priority</option>
-                                                                    <option value="Normal">Normal</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                         <!--end col-->
-                                                         <div class="edit">
-                                                            <button class="btn btn-lg "
-                                                            style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">Dispatch File</button>
-                                                        </div>
-
-                                                        <!--end col-->
-                                                    </div>
-                                                    <!--end row-->
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                </div>
-
-                            </div> <!-- end .h-100-->
-
-                        </div> <!-- end col -->
-
-
-                    </div>
-
-                </div>
-                <!-- container-fluid -->
-            </div>
-            <!-- End Page-content -->
 
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA. Nigeria Customs
+                            Service. All rights reserved. Powered by ED Antia psc Assistant Comptroller of Customs
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
@@ -394,9 +112,11 @@
         </div>
         <!-- end main content-->
 
+        <!-- end main content-->
+
     </div>
     <!-- END layout-wrapper -->
-
+	 
 
 
 
@@ -418,28 +138,238 @@
 
 
     <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/commands.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // Handle logout function
+        function handleLogout(event) {
+            event.preventDefault(); // Prevent default anchor action
+            console.log('Logout button clicked'); // Debug log to confirm click event
+
+            // Show confirmation dialog
+            const userConfirmed = window.confirm("Are you sure you want to log out?");
+
+            if (userConfirmed) {
+                console.log('User confirmed logout');
+
+                // Clear all localStorage items
+                localStorage.clear();
+                console.log("Local storage cleared. User logged out.");
+
+                // Redirect to index page
+                window.location.href = "./index.html"; 
+            } else {
+                console.log("Logout canceled by the user.");
+            }
+        }
+
+        const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
+        const authToggleLink = document.getElementById('auth-toggle-link');
+        const authToggleIcon = document.getElementById('auth-toggle-icon');
+        const toggleInstance = document.getElementById('toggle-instance');
+
+        // Check for user data in localStorage
+        let userData = JSON.parse(localStorage.getItem("userData"));
+        const token = userData?.token;
+
+        console.log(userData);
+
+        if (!token || token === undefined) {
+            // If no token, clear all localStorage items and exit
+            localStorage.clear();
+
+            toggleInstance.textContent = "Login";
+            authToggleIcon.className = "mdi mdi-login text-muted fs-16 align-middle me-1";
+            authToggleLink.href = "login.html"; // Redirect to login page
+            authToggleLink.removeEventListener("click", handleLogout);
+            return;
+        }
+
+        // Validate the token by hitting the /user/profile endpoint
+        fetch("/user/profile", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.log('Invalid token, logging out:', response);
+                localStorage.clear();
+                window.location.href = "./index.html";
+                return;
+            }
+            return response.json();
+        })
+        .then(profileData => {
+            console.log("Profile Data:", profileData);
+
+            // Load appropriate navbar based on userType
+            if (userData?.userType) {
+                let navbarFile = userData.userType === 'admin' ? 'admin-nav.html' : 'service-men-nav.html';
+
+                // Fetch and insert the appropriate navbar HTML
+                fetch(navbarFile)
+                    .then(response => response.text())
+                    .then(data => {
+                        // Insert the navbar HTML
+                        document.getElementById('navbar-container').innerHTML = data;
+
+                        console.log("profileData before setting element",profileData)
+
+                        // After navbar is loaded, access and update elements within it
+                        const serviceNumberElement = document.getElementById('serviceNumber');
+                        const departmentElement = document.getElementById('department');
+                        const usernameElement = document.getElementById('user-profile-name');
+
+                        const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
+                        const authToggleLink = document.getElementById('auth-toggle-link');
+                        const authToggleIcon = document.getElementById('auth-toggle-icon');
+                        const toggleInstance = document.getElementById('toggle-instance');
+
+                        // Set the service number and department if they exist
+                        if (profileData.serviceNumber) {
+                            serviceNumberElement.textContent = profileData.serviceNumber;
+                            departmentElement.textContent = `UNIT: ${profileData.department}`;
+                            usernameElement.textContent = profileData.username;
+                            welcomeLoginMessage.textContent = `Welcome ${profileData.serviceNumber}!`;
+
+                            toggleInstance.textContent = "Logout";
+                            authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
+                            authToggleLink.href = "#"; // Prevent default link behavior
+                            authToggleLink.addEventListener("click", handleLogout);
+                        } else {
+                            serviceNumberElement.textContent = "";
+                            welcomeLoginMessage.textContent = "";
+                        }
+
+                        if (profileData.department) {
+                            departmentElement.textContent = `UNIT: ${profileData.department}`;
+                        } else {
+                            departmentElement.textContent = "";
+                        }
+
+                        if (profileData.username) {
+                        } else {
+                            usernameElement.textContent = "";
+                        }
+
+                        // Determine the current page URL
+                        const currentPath = window.location.pathname.split('/').pop(); // Get the current page file name
+
+                        // Select the nav links
+                        const navLinks = document.querySelectorAll('.nav-link');
+
+                        // Add 'active' class to the current link
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === currentPath) {
+                                link.classList.add('active');
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Error loading the navbar:", error);
+                    });
+            } else {
+                localStorage.clear();
+                console.error("User data not found or invalid in localStorage.");
+                window.location.href = "./index.html";
+            }
+        })
+        .catch(error => {
+            localStorage.clear();
+            console.error("Error fetching profile data:", error);
+        });
+
+        // If userData exists, update UI for logged-in state
+        if (userData) {
+            try {
+                console.log('User is logged in. Updating UI...');
+            } catch (error) {
+                console.error("Error parsing userData:", error);
+            }
+        } else {
+            console.log("No userData found in localStorage. Showing LOG IN button.");
+        }
+    });
+    </script>
+    
+    <script>
+    document.getElementById('reg-command').addEventListener('change', function () {
+        const commandId = this.value;
+        const departmentSelect = document.getElementById('reg-department');
+        const departmentNameInput = document.getElementById('reg-department-name'); // Reference to the hidden input field
+
+        if (commandId) {
+        // Fetch units from the server based on the commandId
+        fetch(`/units/by-command/${commandId}`)
+            .then(response => response.json())
+            .then(data => {
+            // Clear the current options
+            departmentSelect.innerHTML =
+                '<option value="">Select Unit</option><option value="create-new">Create New Unit</option>';
+
+            // Add the fetched units
+            data.forEach(unit => {
+                const option = document.createElement('option');
+                option.value = unit.name; // Set unit name as the value
+                option.text = unit.name; // Display unit name
+                departmentSelect.appendChild(option);
+            });
+            })
+            .catch(err => {
+            console.error('Error fetching units:', err);
+            });
+        } else {
+        // Reset if no command is selected
+        departmentSelect.innerHTML =
+            '<option value="">Select Unit</option><option value="create-new">Create New Unit</option>';
+        }
+    });
+
+    // Update the hidden input with the unit's name when a unit is selected
+    document.getElementById('reg-department').addEventListener('change', function () {
+        const selectedUnitName = this.options[this.selectedIndex].text; // Get the name of the selected option
+        document.getElementById('reg-department-name').value = selectedUnitName; // Update the hidden input with the name
+
+        // Handle the "Create New Unit" option
+        if (this.value === 'create-new') {
+        if (!document.getElementById('create-new-unit')) {
+            const newUnitInput = document.createElement('input');
+            newUnitInput.setAttribute('type', 'text');
+            newUnitInput.setAttribute('id', 'create-new-unit');
+            newUnitInput.setAttribute('class', 'input100');
+            newUnitInput.setAttribute('placeholder', 'New Unit Name');
+            this.parentNode.insertBefore(newUnitInput, this.nextSibling);
+        }
+        } else {
+        const createNewUnitField = document.getElementById('create-new-unit');
+        if (createNewUnitField) {
+            createNewUnitField.remove();
+        }
+        }
+    });
+    </script>
+    
+    
+    
+    
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
+    
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <!-- Vector map-->
-    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-
-    <!--Swiper slider js-->
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Dashboard init -->
-    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
 </body>
 
 

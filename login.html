@@ -1,15 +1,31 @@
 <!doctype html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
 
+<html lang="en" data-layout="horizontal" data-layout-style="default" data-layout-position="fixed" data-topbar="light"
+    data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
+    data-layout-width="fluid" data-preloader="disable">
+
+</html>
 
 <head>
 
     <meta charset="utf-8" />
-    <title>Sign In</title>
+    <title>FileTrakA Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="FileTrakA Signin" name="description" />
+    <meta content="FileTrakA" name="description" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Style css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jsvectormap css -->
+    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
@@ -21,113 +37,562 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+	<link rel="stylesheet" href="css/login.css">
+
+    <style>
+
+
+        .powered-by {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .powered-by p {
+            margin: 0;
+            font-weight: 800;
+            font-size: medium;
+        }
+        
+        .powered-by .credit {
+            text-align: left;
+            margin: 20px 0px 20px 55px;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .powered-by .credit-name {
+            color: black;
+        }
+        
+        .sending-to-label {
+            margin: 20px 0px 20px 0px;
+        }
+        
+        #register-result {
+            margin-top: 20px;
+            color: #d9534f; /* Red color for error messages */
+        }
+        .login-images {
+            display: flex;
+            width: 100%;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .navbar .nav-link {
+          color
+          : #fff !important;
+        }
+
+        /* Success message styles */
+        #login-error.success {
+            color: #4CAF50;
+            align-self: center;
+        }
+
+        /* Error message styles */
+        #login-error.error {
+            color: #f44336;
+            align-self: center;
+        }
+
+        input.middle:focus {
+            outline-width: 0 !important;
+        }
+
+        input {
+            outline:none !important;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none !important;
+        }
+
+        [contenteditable="true"]:focus {
+            outline: none !important;
+        }
+
+      </style>
 
 
 </head>
 
 <body>
 
-    <!-- auth-page wrapper -->
-    <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
-        <div class="bg-overlay"></div>
-        <!-- auth-page content -->
-        <div class="auth-page-content overflow-hidden pt-lg-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mx-auto">
-                        <div class="card overflow-hidden">
-                            <div class="row g-0">
-                               
-                                <!-- end col -->
-                                <div class="col-lg-12">
-                                    <div class="p-lg-5 p-4">
-                                        <div>
-                                            <center>
-                                                <a href="index.html">
-                                                    <img src="assets/images/fileLogo.png" class="card-logo card-logo-dark" alt="logo dark" height="50">
-                                                </a>
-                                            </center>
-                                        </div>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
 
-                                        <div class="mt-4">
-                                            <form action="#">
-                                                <div class="mb-3">
-                                                    <label for="username" class="form-label">Service Number</label>
-                                                    <input type="text" class="form-control" id="username" placeholder="Enter Service Number">
-                                                </div>
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/fileLogo.png" alt="" height="40">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/fileLogo.png" alt="" height="30">
+                                </span>
+                            </a>
 
-                                                <div class="mb-3">
-                                                    <div class="float-end">
-                                                        <a href="#" class="text-muted">Forgot password?</a>
-                                                    </div>
-                                                    <label class="form-label" for="password-input">Password</label>
-                                                    <div class="position-relative auth-pass-inputgroup mb-3">
-                                                        <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input">
-                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none shadow-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
-                                                    </div>
-                                                </div>
-                                              <center>  
-                                                <div class="mt-4">
-                                                    <button class="btn btn-success w-50" type="submit"  style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">LOG IN</button>
-                                                </div>
-                                              </center>
-                                                                                                
-                                            </form>
-                                        </div>
-                                        
-                                    </div>
-                                    <center>
-                                        <p class="fs-15 fst-italic">
-                                            Powered by ED Antia psc <br>
-                                            Assistant Comptroller of Customs <br>
-                                            © 2024 Nigeria Customs Service. All rights reserved.
-                                        </p>
-                                    </center>
-                                    
-                                </div>
-                                <!-- end col -->
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="assets/images/fileLogo.png" alt="" height="20">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/fileLogo.png" alt="" height="40">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger shadow-none"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+
+                        <!-- App Search-->
+                        <form class="app-search d-none d-md-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off"
+                                    id="search-options" value="">
+                                <span class="mdi mdi-magnify search-widget-icon"></span>
+                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
+                                    id="search-close-options"></span>
                             </div>
-                            <!-- end row -->
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
 
+                        </form>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="bx bx-search fs-22"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username">
+                                            <button class="btn btn-primary" type="submit"><i
+                                                    class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div id="user-profile-info">
+                            <p><b id="serviceNumber"></b> <br><span id="department"></span></p>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user"
+                                        src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                                    <span class="text-start ms-xl-2">
+                                        <span id="user-profile-name" class="d-none d-xl-inline-block ms-1 fw-medium user-name-text"></span>
+                                       
+                                    </span> 
+                                </span>
+
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 id="welcome-message-service-number" class="dropdown-header"></h6>
+
+                                <a class="dropdown-item" href="#" id="auth-toggle-link">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1" id="auth-toggle-icon"></i> 
+                                    <span class="align-middle" id="toggle-instance" data-key="t-logout"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- end row -->
             </div>
-            <!-- end container -->
+        </header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/fileLogo.png" alt="" height="20">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/fileLogo.png" alt="" height="40">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/fileLogo.png" alt="" height="20">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/fileLogo.png" alt="" height="40">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="index.html">
+                                <span data-key="t-dashboards">HOME</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="change-password.html">
+                                <span data-key="t-dashboards">CHANGE PASSWORD</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="help.html">
+                                <span data-key="t-dashboards">HELP</span>
+                            </a>
+                        </li>
+                        
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
         </div>
-        <!-- end auth page content -->
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
 
-        <!-- footer -->
-        <footer class="footer">
+        <!-- Toast container -->
+        <div aria-live="polite" aria-atomic="true" class="position-relative" style="z-index: 9999;">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="toastMessage" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                <strong id="toastTitle" class="me-auto"></strong>
+                <small class="text-muted">Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div id="toastBody" class="toast-body"></div>
+            </div>
+            </div>
+        </div>
+        <!-- Toast container End -->
+  
+        <!-- styling removed -->
+        <!-- auth-bg-cover  -->
+        <section class="ftco-section py-5 d-flex justify-content-center align-items-center min-vh-100" style="margin-top: 40px;">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center">
-                            <p class="mb-0">&copy;
-                                <script>document.write(new Date().getFullYear())</script> FileTrakA.
-                            </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-7 col-lg-5">
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="icon d-flex align-items-center justify-content-center" style="background-color: #0F7745 !important; display: flex; align-items: center; justify-content: center;">
+                                <i class="ri-lock-password-line p-0 m-0" style="font-size: 30px; color: #fff;"></i>
+                            </div>
+                            <form class="login-form validate-form" id="login-form">
+                                    <!-- Service Number Input with Icon -->
+                                    <div class="form-group mb-3">
+                                        <label for="service-num" class="form-label">Service Number</label>
+                                        <div class="input-group" style="height: 40px !important;"> <!-- Set the height of the input group to match icon height -->
+                                            <span class="input-group-text" style="background-color: #fff; border: 1px solid #ced4da; border-right: none; height: 100% !important; display: flex; align-items: center;">
+                                                <i class="ri-user-fill"></i> <!-- Icon remains centered -->
+                                            </span>
+                                            <input type="text" id="service-num" class="form-control" placeholder="Enter Service Number" required 
+                                                style="background-color: #fff; border: 1px solid #ced4da; border-left: none; outline: none; box-shadow: none; height: 100% !important;">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Password Input with Icon -->
+                                    <div class="form-group mb-3">
+                                        <label for="password-input" class="form-label">Password</label>
+                                        <div class="input-group" style="height: 40px !important;"> <!-- Set the height of the input group to match icon height -->
+                                            <span class="input-group-text" style="background-color: #fff; border: 1px solid #ced4da; border-right: none; height: 100% !important; display: flex; align-items: center;">
+                                                <i class="ri-lock-fill"></i> <!-- Icon remains centered -->
+                                            </span>
+                                            <input type="password" id="password" class="form-control" placeholder="Enter Password" required 
+                                                style="background-color: #fff; border: 1px solid #ced4da; border-left: none; border-right: none !important; outline: none; box-shadow: none; height: 100% !important;">
+                                            <span class="input-group-text" id="password-addon" style="background-color: #fff; border: 1px solid #ced4da; border-left: none !important; cursor: pointer; height: 100% !important; display: flex; align-items: center;">
+                                                <i class="ri-eye-fill align-middle" style="transform: none !important; transition: none !important;"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control btn-primary rounded submit px-3"  style="background-color:grey !important; color: white !important;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">Login</button>
+                                    </div>
+
+                                    <div class="form-group d-md-flex" style="justify-content: start;">
+                                        <div class="text-md-right" style="display: flex; align-items: end; justify-content: center;">
+                                            <p style="margin: 0px; padding: 0px;">Forgot Password?</p>
+                                            <a href="forgot-password.html" class="ml-2 link" style="color: #0F7745 !important;">click here</a>
+                                        </div>
+                                    </div>
+                            </form>
+                            <div id="login-error" style="width: 100%; text-align: center; margin-top: 30px"></div>
+                            <div class="powered-by">
+                                <p>Powered by ED Antia psc</p>
+                                <p>Assistant Comptroller of Customs</p>
+                                <p class="copyright">© 2024 Nigeria Customs Service. All rights reserved.</p>
+			                </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- end Footer -->
+        </section>
+
+        <!-- end main content-->
+
     </div>
-    <!-- end auth-page-wrapper -->
+    <!-- END layout-wrapper -->
+	 
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" style="background-color: transparent !important; color: #fff;">
+        <div class="" style="background-color: none !important;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <p class="mb-0" style="color: #fff;">&copy;
+                            <script>document.write(new Date().getFullYear())</script> FileTrakA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 
     <!-- JAVASCRIPT -->
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle logout function
+            function handleLogout(event) {
+                event.preventDefault(); // Prevent default anchor action
+                console.log('Logout button clicked'); // Debug log to confirm click event
+    
+                // Show confirmation dialog
+                const userConfirmed = window.confirm("Are you sure you want to log out?");
+    
+                if (userConfirmed) {
+                    console.log('User confirmed logout');
+                    
+                    // Clear all localStorage items
+                    localStorage.clear();
+                    console.log("Local storage cleared. User logged out.");
+    
+                    // Redirect to index page
+                    window.location.href = "index.html"; 
+                } else {
+                    console.log("Logout canceled by the user.");
+                }
+            }
+    
+            // Select the logout/auth button
+            // const authButton = document.getElementById('auth-button');
+            // const loginCardLink = document.getElementById('login-card-link');
+            // const changePasswordCardLink = document.getElementById('change-password-card-link');
+            // const loginDescriptionText = document.getElementById('login-description');
+            // const dashboardDescriptiontext = document.getElementById('dashboard-description');
+            const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
+            const authToggleLink = document.getElementById('auth-toggle-link');
+            const authToggleIcon = document.getElementById('auth-toggle-icon');
+            const toggleInstance = document.getElementById('toggle-instance');
+    
+            // Check for user data in localStorage
+            let userData = JSON.parse(localStorage.getItem("userData"));
+            const token = userData?.token;
+    
+            if (!token || token === undefined) {
+                // If no token, clear all localStorage items and exit
+                localStorage.clear();
+
+                toggleInstance.textContent = "Login";
+                authToggleIcon.className = "mdi mdi-login text-muted fs-16 align-middle me-1";
+                authToggleLink.href = "login.html"; // Redirect to login page
+                authToggleLink.removeEventListener("click", handleLogout);
+                return;
+            }
+    
+            // Validate the token by hitting the /user/profile endpoint
+            fetch("/user/profile", {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.log('Invalid token, logging out:', response);
+                    localStorage.clear();
+                    window.location.href = "index.html";
+                    return;
+                }
+                return response.json();
+            })
+            .then(profileData => {
+                console.log("Profile Data:", profileData);
+            })
+            .catch(error => {
+                localStorage.clear();
+                console.error("Error fetching profile data:", error);
+            });
+    
+            // If userData exists, update UI for logged-in state
+            if (userData) {
+                try {
+                    console.log('User is logged in. Updating UI...');
+                    
+                    // Update user profile info
+                    const serviceNumberElement = document.getElementById('serviceNumber');
+                    const departmentElement = document.getElementById('department');
+                    const usernameElement = document.getElementById('user-profile-name')
+    
+                    // Set the service number and department if they exist
+                    if (userData.serviceNumber) {
+                        serviceNumberElement.textContent = userData.serviceNumber;
+                        welcomeLoginMessage.textContent = `Welcome ${userData.serviceNumber}!`
+
+                        toggleInstance.textContent = "Logout";
+                        authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
+                        authToggleLink.href = "#"; // Prevent default link behavior
+                        authToggleLink.addEventListener("click", handleLogout);
+                    } else {
+                        serviceNumberElement.textContent = "";
+                        welcomeLoginMessage.textContent = ""
+                    }
+    
+                    if (userData.department) {
+                        departmentElement.textContent = `UNIT: ${userData.department}`;
+                    } else {
+                        departmentElement.textContent = "";
+                    }
+                    if (userData.username) {
+                        usernameElement.textContent = userData.username
+                    } else {
+                        usernameElement.textContent = ""
+                    }
+    
+                    // Change button to "LOG OUT"
+                    authButton.textContent = "LOG OUT";
+                    authButton.href = "#"; // Prevent default link behavior
+                    authButton.addEventListener("click", handleLogout); // Attach logout handler
+                    loginCardLink.addEventListener("click", handleLogout); 
+    
+                    // Change Login card to "Logout"
+                    loginCardLink.textContent = "Logout";
+                    loginDescriptionText.textContent = "Click here to logout";
+                    dashboardDescriptiontext.textContent = "Access Dashboard";
+                    loginCardLink.href = "#"; // Prevent default link behavior
+    
+                    // Change "Change your password" card to "Dashboard"
+                    changePasswordCardLink.textContent = "Dashboard";
+                    changePasswordCardLink.href = "dashboard.html"; // Link to dashboard page
+    
+                } catch (error) {
+                    console.error("Error parsing userData:", error);
+                }
+            } else {
+                console.log("No userData found in localStorage. Showing LOG IN button.");
+                // If not logged in, show "LOG IN" button
+                authButton.textContent = "LOG IN";
+                authButton.href = "login.html"; // Redirect to login page
+                authButton.removeEventListener("click", handleLogout); // Remove logout handler
+            }
+        });
+    </script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="assets/js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
     <!-- password-addon init -->
     <script src="assets/js/pages/password-addon.init.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
 </body>
+
 
 </html>
