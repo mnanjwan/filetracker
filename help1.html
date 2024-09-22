@@ -1,0 +1,399 @@
+<!doctype html>
+
+<html lang="en" data-layout="horizontal" data-layout-style="default" data-layout-position="fixed" data-topbar="light"
+    data-sidebar-visibility="show" data-sidebar="light" data-sidebar-size="lg" data-bs-theme="light"
+    data-layout-width="fluid" data-preloader="disable">
+
+</html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>FileTrakA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="FileTrakA" name="description" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Style css -->
+    <!-- Main css -->
+    <link href="css/main.css" rel="stylesheet">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <!-- custom Css-->
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/bootstrap-video-carousel.min.css" />
+
+    <style>
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+            height: 100vh;
+        }
+
+        .carousel-item:nth-child(1) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel-item:nth-child(2) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .carousel-item:nth-child(3) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+            #introCarousel {
+                margin-top: -58.59px;
+            }
+        }
+
+        .navbar .nav-link {
+            color: #fff !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-landing navbar-light fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/fileLogo.png" class="card-logo card-logo-dark" alt="logo dark" height="50">
+                    <img src="assets/images/fileLogo.png" class="card-logo card-logo-light" alt="logo light"
+                        height="50">
+                </a>
+                <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                        <li class="nav-item">
+                            <a class="nav-link fs-15" style="color: black;" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-15" style="color: black;" href="#">CHANGE PASSWORD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-15" style="color: black;" href="help.html">HELP</a>
+                        </li>
+                    </ul>
+                    <div class="">
+                        <a href="login.html" class="btn"
+                             style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">LOG IN </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Left Sidebar End -->
+    <!-- Vertical Overlay-->
+            <div class="bg-overlay bg-overlay-pattern"></div>
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <div class="container" style="padding: 50px; margin-top: 50px">
+
+            <div class="">
+
+                <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                    <p class="who-we-are">About File TrackA</p>
+                    <h3>Your Efficient File Management Solution</h3>
+                    <p class="fst-italic">
+                        File TrackA is a secure web-based system designed to manage physical files within the Nigerian
+                        Customs. It ensures only authorized officers can update and track files, making it easier to
+                        manage and secure important documents without converting them to electronic formats.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> <span>Quickly confirm received files and update their
+                                status.</span></li>
+                        <li><i class="bi bi-check-circle"></i> <span>Easily update files as they move to new units
+                                within the command.</span></li>
+                        <li><i class="bi bi-check-circle"></i> <span>Search and access file histories with ease using
+                                file ID or description.</span></li>
+                    </ul>
+                    <a href="login.html" class="read-more" style="background: #d7d6d6"><span>Get Started</span><i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- /About Section -->
+
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section" style="background: f8f9fa;">
+        <div class="container" style="background: f8f9fa;">
+            <div class="row gy-4">
+                <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                        <div>
+                            <h4 class="title"><a href="login.html" class="stretched-link">Login</a></h4>
+                            <p class="description">Get access to your File TrackA dashboard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                        <div>
+                            <h4 class="title"><a href="change-password.html" class="stretched-link">Change your
+                                    password</a></h4>
+                            <p class="description">Change your password securely and easily</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6" style="margin-bottom: 15px" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item d-flex">
+                        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                        <div>
+                            <h4 class="title"><a href="help.html" class="stretched-link">Help</a></h4>
+                            <p class="description">Need help? We’ve got you covered. Click here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="featured-services" class="featured-services section" style="background: #f8f9fa;">
+        <div class="container" style="background: #f8f9fa;">
+            <div class="powered-by">
+                <p>Powered by ED Antia psc</p>
+                <p>Assistant Comptroller of Customs</p>
+                <p>07037610726, 08080800700</p>
+                <div style="text-align: center">
+                    <p>Credits:</p>
+                    <p class="credit-name">Comptroller EJ Edelduok</p>
+                    <p class="credit-name">Comptroller IK Oladeji</p>
+                    <p class="credit-name">Assistant Comptroller RI Eya</p>
+                </div>
+                <p class="copyright">© 2024 Nigeria Customs Service. All rights reserved.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle logout function
+            function handleLogout(event) {
+                event.preventDefault(); // Prevent default anchor action
+                console.log('Logout button clicked'); // Debug log to confirm click event
+
+                // Show confirmation dialog
+                const userConfirmed = window.confirm("Are you sure you want to log out?");
+
+                if (userConfirmed) {
+                    console.log('User confirmed logout');
+
+                    // Clear all localStorage items
+                    localStorage.clear();
+                    console.log("Local storage cleared. User logged out.");
+
+                    // Redirect to index page
+                    window.location.href = "index.html";
+                } else {
+                    console.log("Logout canceled by the user.");
+                }
+            }
+
+            // Select the logout/auth button
+            // const authButton = document.getElementById('auth-button');
+            // const loginCardLink = document.getElementById('login-card-link');
+            // const changePasswordCardLink = document.getElementById('change-password-card-link');
+            // const loginDescriptionText = document.getElementById('login-description');
+            // const dashboardDescriptiontext = document.getElementById('dashboard-description');
+            const welcomeLoginMessage = document.getElementById('welcome-message-service-number');
+            const authToggleLink = document.getElementById('auth-toggle-link');
+            const authToggleIcon = document.getElementById('auth-toggle-icon');
+            const toggleInstance = document.getElementById('toggle-instance');
+
+            // Check for user data in localStorage
+            let userData = JSON.parse(localStorage.getItem("userData"));
+            const token = userData?.token;
+
+            if (!token || token === undefined) {
+                // If no token, clear all localStorage items and exit
+                localStorage.clear();
+
+                toggleInstance.textContent = "Login";
+                authToggleIcon.className = "mdi mdi-login text-muted fs-16 align-middle me-1";
+                authToggleLink.href = "login.html"; // Redirect to login page
+                authToggleLink.removeEventListener("click", handleLogout);
+                return;
+            }
+
+            // Validate the token by hitting the /user/profile endpoint
+            fetch("/user/profile", {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.log('Invalid token, logging out:', response);
+                        localStorage.clear();
+                        window.location.href = "index.html";
+                        return;
+                    }
+                    return response.json();
+                })
+                .then(profileData => {
+                    console.log("Profile Data:", profileData);
+                })
+                .catch(error => {
+                    localStorage.clear();
+                    console.error("Error fetching profile data:", error);
+                });
+
+            // If userData exists, update UI for logged-in state
+            if (userData) {
+                try {
+                    console.log('User is logged in. Updating UI...');
+
+                    // Update user profile info
+                    const serviceNumberElement = document.getElementById('serviceNumber');
+                    const departmentElement = document.getElementById('department');
+                    const usernameElement = document.getElementById('user-profile-name')
+
+                    // Set the service number and department if they exist
+                    if (userData.serviceNumber) {
+                        serviceNumberElement.textContent = userData.serviceNumber;
+                        welcomeLoginMessage.textContent = `Welcome ${userData.serviceNumber}!`
+
+                        toggleInstance.textContent = "Logout";
+                        authToggleIcon.className = "mdi mdi-logout text-muted fs-16 align-middle me-1";
+                        authToggleLink.href = "#"; // Prevent default link behavior
+                        authToggleLink.addEventListener("click", handleLogout);
+                    } else {
+                        serviceNumberElement.textContent = "";
+                        welcomeLoginMessage.textContent = ""
+                    }
+
+                    if (userData.department) {
+                        departmentElement.textContent = `UNIT: ${userData.department}`;
+                    } else {
+                        departmentElement.textContent = "";
+                    }
+                    if (userData.username) {
+                        usernameElement.textContent = userData.username
+                    } else {
+                        usernameElement.textContent = ""
+                    }
+
+                    // Change button to "LOG OUT"
+                    authButton.textContent = "LOG OUT";
+                    authButton.href = "#"; // Prevent default link behavior
+                    authButton.addEventListener("click", handleLogout); // Attach logout handler
+                    loginCardLink.addEventListener("click", handleLogout);
+
+                    // Change Login card to "Logout"
+                    loginCardLink.textContent = "Logout";
+                    loginDescriptionText.textContent = "Click here to logout";
+                    dashboardDescriptiontext.textContent = "Access Dashboard";
+                    loginCardLink.href = "#"; // Prevent default link behavior
+
+                    // Change "Change your password" card to "Dashboard"
+                    changePasswordCardLink.textContent = "Dashboard";
+                    changePasswordCardLink.href = "dashboard.html"; // Link to dashboard page
+
+                } catch (error) {
+                    console.error("Error parsing userData:", error);
+                }
+            } else {
+                console.log("No userData found in localStorage. Showing LOG IN button.");
+                // If not logged in, show "LOG IN" button
+                authButton.textContent = "LOG IN";
+                authButton.href = "login.html"; // Redirect to login page
+                authButton.removeEventListener("click", handleLogout); // Remove logout handler
+            }
+        });
+    </script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+
+</html>

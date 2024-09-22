@@ -32,6 +32,51 @@
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
+    <style>
+        .icon-text-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Spacing between icon and text */
+        }
+
+        .icon {
+            background-color: #0b6528;
+            border-radius: 50%;
+            color: white;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            height: 60px; /* Match the icon height */
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .text {
+                font-size: 10px;
+                height: 40px; /* Match the mobile icon height */
+            }
+        }
+    </style>
+
 
 </head>
 
@@ -51,7 +96,7 @@
                                     <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                                 <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                             </a>
 
@@ -89,7 +134,6 @@
                     </div>
 
                     <div class="d-flex align-items-center">
-
                         <div class="dropdown d-md-none topbar-head-dropdown header-item">
                             <button type="button"
                                 class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
@@ -113,22 +157,20 @@
                         </div>
 
                         <!-- Notifications -->
-                         <div>
-                            <p><b>NCS48888 <br> UNIT: ACG Office</b> </p>
-                         </div>
-
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="d-flex align-items-center">
-                                    <img class="rounded-circle header-profile-user"
-                                        src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                    <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">MB Musa </span>
-                                       
-                                    </span> 
+                                    <div class="icon-text-wrapper">
+                                        <i class="ri-user-fill icon"></i>
+                                        <b class="text">
+                                            <span>Name: MB MUSA</span> 
+                                            <span>SVC. NO.:NCS48888</span>  
+                                            <span>Unit: ACG Office</span> 
+                                            <span>Command/Department: HQTRS</span>
+                                        </b>
+                                    </div>
                                 </span>
-
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
@@ -139,7 +181,6 @@
                                         class="align-middle" data-key="t-logout">Logout</span></a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -181,37 +222,41 @@
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DASHBOARD</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE FILE</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE USER</span>
                             </a>
                         </li>
-                        
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">FILE TRACKING</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DISPATCH FILES</span>
                             </a>
-
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="user_help.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                                <span data-key="t-dashboards">HELP</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -405,7 +450,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                <a href="">FAQ</a>
+                                <a href="">HELP</a>
                             </div>
                         </div>
                     </div>

@@ -554,7 +554,7 @@ var Prism = (function (_self) {
 		 * It must have a class of `language-xxxx` to be processed, where `xxxx` is a valid language identifier.
 		 * @param {boolean} [async=false] Whether the element is to be highlighted asynchronously using Web Workers
 		 * to improve performance and avoid blocking the UI when highlighting very large chunks of code. This option is
-		 * [disabled by default](https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default).
+		 * [disabled by default](https://prismjs.com/HELP.html#why-is-asynchronous-highlighting-disabled-by-default).
 		 *
 		 * Note: All language definitions required to highlight the code must be included in the main `prism.js` file for
 		 * asynchronous highlighting to work. You can build your own bundle on the

@@ -32,6 +32,50 @@
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
+    <style>
+        .icon-text-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Spacing between icon and text */
+        }
+
+        .icon {
+            background-color: #0b6528;
+            border-radius: 50%;
+            color: white;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            height: 60px; /* Match the icon height */
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .text {
+                font-size: 10px;
+                height: 40px; /* Match the mobile icon height */
+            }
+        }
+    </style>
 
 </head>
 
@@ -51,7 +95,7 @@
                                     <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                                 <span class="logo-lg">
-                        <img src="assets/images/fileLogo.png" alt="" height="50">
+                                    <img src="assets/images/fileLogo.png" alt="" height="50">
                                 </span>
                             </a>
 
@@ -89,7 +133,6 @@
                     </div>
 
                     <div class="d-flex align-items-center">
-
                         <div class="dropdown d-md-none topbar-head-dropdown header-item">
                             <button type="button"
                                 class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
@@ -113,22 +156,20 @@
                         </div>
 
                         <!-- Notifications -->
-                         <div>
-                            <p><b>NCS48888 <br> UNIT: ACG Office</b> </p>
-                         </div>
-
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn shadow-none" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="d-flex align-items-center">
-                                    <img class="rounded-circle header-profile-user"
-                                        src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
-                                    <span class="text-start ms-xl-2">
-                                        <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">MB Musa </span>
-                                       
-                                    </span> 
+                                    <div class="icon-text-wrapper">
+                                        <i class="ri-user-fill icon"></i>
+                                        <b class="text">
+                                            <span>Name: MB MUSA</span> 
+                                            <span>SVC. NO.:NCS48888</span>  
+                                            <span>Unit: ACG Office</span> 
+                                            <span>Command/Department: HQTRS</span>
+                                        </b>
+                                    </div>
                                 </span>
-
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
@@ -139,7 +180,6 @@
                                         class="align-middle" data-key="t-logout">Logout</span></a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -175,43 +215,46 @@
 
             <div id="scrollbar">
                 <div class="container-fluid">
-
                     <div id="two-column-menu">
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="dashboard.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DASHBOARD</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE FILE</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="create_user.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">CREATE USER</span>
                             </a>
                         </li>
-                        
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="file_tracking.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">FILE TRACKING</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;" onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                            <a class="nav-link menu-link" href="dispatch_file.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
                                 <span data-key="t-dashboards">DISPATCH FILES</span>
                             </a>
-
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="user_help.html" style="color:#0b6528;"
+                                onmouseover="this.style.color='grey';" onmouseout="this.style.color='#0b6528';">
+                                <span data-key="t-dashboards">HELP</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -233,34 +276,18 @@
                     <div class="row">
                         <div class="col">
                             <div class="h-100">
+                                <!-- <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card card-animate"> 
+                                            <center>
+                                                <p><br><b>NCS48888 | UNIT: ACG Office | Name: MB MUSA | Command/ Department: HQTRS</b></p>
+
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div> -->
                                 <div class="row">
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p
-                                                            class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Command/ Department</p>
-                                                    </div>
-
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">HQTRS </h4>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-success rounded fs-3">
-                                                            <i class="ri-community-line"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
+                                    <div class="col-xl-4 col-md-6">
                                         <!-- card -->
                                         <div class="card card-animate">
                                             <div class="card-body">
@@ -285,9 +312,7 @@
                                             </div><!-- end card body -->
                                         </div><!-- end card -->
                                     </div><!-- end col -->
-
-
-                                    <div class="col-xl-3 col-md-6">
+                                    <div class="col-xl-4 col-md-6">
                                         <!-- card -->
                                         <div class="card card-animate">
                                             <div class="card-body">
@@ -312,8 +337,7 @@
                                             </div><!-- end card body -->
                                         </div><!-- end card -->
                                     </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
+                                    <div class="col-xl-4 col-md-6">
                                         <!-- card -->
                                         <div class="card card-animate">
                                             <div class="card-body">
@@ -339,7 +363,6 @@
                                         </div><!-- end card -->
                                     </div><!-- end col -->
                                 </div> <!-- end row-->
-
 
                                 <div class="row">
                                     <div class="col-lg-9">
@@ -402,9 +425,10 @@
                                                                     <td>
                                                                         <div class="d-flex gap-2">
                                                                             <div class="edit">
-                                                                                <button
-                                                                                    class="btn btn-sm "
-                                                                                    style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';"
+                                                                                <button class="btn btn-sm "
+                                                                                    style="background-color:grey; color: white;"
+                                                                                    onmouseover="this.style.backgroundColor='#0b6528';"
+                                                                                    onmouseout="this.style.backgroundColor='grey';"
                                                                                     data-bs-target="#showModal">Receive</button>
                                                                             </div>
 
@@ -413,7 +437,7 @@
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-                                                      
+
                                                     </div>
 
                                                     <div class="d-flex justify-content-end">
@@ -451,12 +475,18 @@
                                                         <div class="acitivity-item d-flex">
                                                             <div class="flex-grow-1 ms-3">
                                                                 <h4 class="mb-1 lh-base">
-                                                                    <a href="" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';"
+                                                                    <a href="" style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';"
                                                                         class="fw-medium">Recently Recieved
                                                                         Files</a>
 
                                                                 </h4>
-                                                                <p class="text-muted mb-1"><a href="" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">@Recently Recieved
+                                                                <p class="text-muted mb-1"><a href=""
+                                                                        style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">@Recently
+                                                                        Recieved
                                                                         Files</a> </p>
                                                             </div>
                                                         </div>
@@ -465,12 +495,17 @@
                                                         <div class="acitivity-item d-flex">
                                                             <div class="flex-grow-1 ms-3">
                                                                 <h4 class="mb-1 lh-base">
-                                                                    <a href=""
-                                                                        class="fw-medium" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">Recently
+                                                                    <a href="" class="fw-medium" style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">Recently
                                                                         Dispatched Files</a>
 
                                                                 </h4>
-                                                                <p class="text-muted mb-1"><a href="" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">@Dispatch File</a>
+                                                                <p class="text-muted mb-1"><a href=""
+                                                                        style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">@Dispatch
+                                                                        File</a>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -479,12 +514,18 @@
                                                         <div class="acitivity-item d-flex">
                                                             <div class="flex-grow-1 ms-3">
                                                                 <h4 class="mb-1 lh-base">
-                                                                    <a href=""
-                                                                        class="fw-medium" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">Create a New
+                                                                    <a href="" class="fw-medium" style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">Create a
+                                                                        New
                                                                         File</a>
 
                                                                 </h4>
-                                                                <p class="text-muted mb-1"><a href="" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">@Create a New
+                                                                <p class="text-muted mb-1"><a href=""
+                                                                        style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">@Create a
+                                                                        New
                                                                         File</a> </p>
                                                             </div>
                                                         </div>
@@ -493,20 +534,28 @@
                                                         <div class="acitivity-item d-flex">
                                                             <div class="flex-grow-1 ms-3">
                                                                 <h4 class="mb-1 lh-base">
-                                                                    <a href=""
-                                                                        class="fw-medium" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">Dispatch File</a>
+                                                                    <a href="" class="fw-medium" style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">Dispatch
+                                                                        File</a>
 
                                                                 </h4>
-                                                                <p class="text-muted mb-1"><a href="" style="color:grey;" onmouseover="this.style.color='#0b6528';" onmouseout="this.style.color='grey';">@Dispatch File</a>
+                                                                <p class="text-muted mb-1"><a href=""
+                                                                        style="color:grey;"
+                                                                        onmouseover="this.style.color='#0b6528';"
+                                                                        onmouseout="this.style.color='grey';">@Dispatch
+                                                                        File</a>
                                                                 </p>
                                                             </div>
                                                         </div>
                                                         <hr>
 
-                                                        <center><button type="button" class="btn"
-                                                                data-bs-toggle="modal"
+                                                        <center><button type="button" class="btn" data-bs-toggle="modal"
                                                                 data-bs-target=".bs-example-modal-xl"
-                                                                 style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">Toogle Registers</button></center>
+                                                                style="background-color:grey; color: white;"
+                                                                onmouseover="this.style.backgroundColor='#0b6528';"
+                                                                onmouseout="this.style.backgroundColor='grey';">Toogle
+                                                                Registers</button></center>
 
 
                                                     </div>
@@ -534,11 +583,12 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs
+                            Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                <a href="">FAQ</a>
+                                <a href="">HELP</a>
                             </div>
                         </div>
                     </div>

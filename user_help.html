@@ -9,7 +9,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>FileTrakA - Create File</title>
+    <title>FileTrakA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="FileTrakA" name="description" />
     <!-- App favicon -->
@@ -36,7 +36,8 @@
         .icon-text-wrapper {
             display: flex;
             align-items: center;
-            gap: 15px; /* Spacing between icon and text */
+            gap: 15px;
+            /* Spacing between icon and text */
         }
 
         .icon {
@@ -49,7 +50,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-shrink: 0; /* Prevent icon from shrinking */
+            flex-shrink: 0;
+            /* Prevent icon from shrinking */
         }
 
         .text {
@@ -59,7 +61,8 @@
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            height: 60px; /* Match the icon height */
+            height: 60px;
+            /* Match the icon height */
         }
 
         /* Mobile adjustments */
@@ -72,11 +75,11 @@
 
             .text {
                 font-size: 10px;
-                height: 40px; /* Match the mobile icon height */
+                height: 40px;
+                /* Match the mobile icon height */
             }
         }
     </style>
-
 
 </head>
 
@@ -164,9 +167,9 @@
                                     <div class="icon-text-wrapper">
                                         <i class="ri-user-fill icon"></i>
                                         <b class="text">
-                                            <span>Name: MB MUSA</span> 
-                                            <span>SVC. NO.:NCS48888</span>  
-                                            <span>Unit: ACG Office</span> 
+                                            <span>Name: MB MUSA</span>
+                                            <span>SVC. NO.:NCS48888</span>
+                                            <span>Unit: ACG Office</span>
                                             <span>Command/Department: HQTRS</span>
                                         </b>
                                     </div>
@@ -216,7 +219,6 @@
 
             <div id="scrollbar">
                 <div class="container-fluid">
-
                     <div id="two-column-menu">
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
@@ -277,112 +279,183 @@
                 <div class="container-fluid">
 
                     <div class="row">
-                        <div class="col">
-
-                            <div class="h-100">
-
-
-                                <div class="row">
-                                    <div class="col-lg-5 mx-auto">
-                                        <div class="card">
-                                            <div class="card-header align-items-center d-flex"
-                                                style="background-color: #0b6528;">
-                                                <h4 style="color: #ffffff;" class="card-title mb-0 flex-grow-1">Create
-                                                    New File</h4>
-
-                                            </div><!-- end card header -->
-                                            <div class="card-body">
-                                                <div class="live-preview">
-                                                    <div class="row gy-4">
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="basiInput" class="form-label">File
-                                                                    Number</label>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="NCS-">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="basiInput" class="form-label">Sending
-                                                                    From</label>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="LEGAL SEAT" readonly>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="Sending_To">Sending To</label>
-                                                                <select class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Select Unit</option>
-                                                                    <option value="DC ADMIN">DC ADMIN</option>
-                                                                    <option value="DC ENFORCEMENT">DC ENFORCEMENT
-                                                                    </option>
-                                                                    <option value="DC REVENUE">DC REVENUE</option>
-                                                                    <option value="Oic STATION">Oic STATION</option>
-                                                                    <option value="Create New Unit">Create New Unit
-                                                                    </option>
-                                                                </select>
-                                                                <input type="text" class="form-control" id="basiInput"
-                                                                    value="New Unit Name">
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="Precedence_Marking">Precedence
-                                                                    Marking</label>
-                                                                <select class="form-select mb-3"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Precedence Marking</option>
-                                                                    <option value="Immediate">Immediate</option>
-                                                                    <option value="Priority">Priority</option>
-                                                                    <option value="Normal">Normal</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <!--end col-->
-                                                        <div class="col-xxl-3 col-md-12">
-                                                            <div>
-                                                                <label for="exampleFormControlTextarea5"
-                                                                    class="form-label">File Description</label>
-                                                                <textarea class="form-control"
-                                                                    id="exampleFormControlTextarea5"
-                                                                    rows="3"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <!--end col-->
-
-
-                                                        <!--end col-->
-                                                        <div class="edit">
-                                                            <button class="btn btn-lg "
-                                                            style="background-color:grey; color: white;" onmouseover="this.style.backgroundColor='#0b6528';" onmouseout="this.style.backgroundColor='grey';">Create
-                                                                File</button>
-                                                        </div>
-
-                                                        <!--end col-->
-                                                    </div>
-                                                    <!--end row-->
-                                                </div>
-
+                        <div class="col-lg-12">
+                            <div class="card rounded-0 bg-success-subtle mx-n4 mt-n4 border-top">
+                                <div class="px-4">
+                                    <div class="row">
+                                        <div class="col-xxl-5 align-self-center">
+                                            <div class="py-4">
+                                                <h4 class="display-6 coming-soon-text">Help!!!</h4>
+                                                <p class="text-success fs-15 mt-3">Guide to using FileTrakA!</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-3 ms-auto">
+                                            <div class="mb-n5 pb-1 faq-img d-none d-xxl-block">
+                                                <img src="assets/images/faq-img.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
                                     </div>
-                                    <!--end col-->
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+
+                            <div class="row justify-content-evenly mb-4">
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
+                                       
+
+                                        <div class="accordion accordion-border-box" id="genques-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseOne" aria-expanded="true" aria-controls="genques-collapseOne">
+                                                        How to Login ?
+                                                       
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseOne" class="accordion-collapse collapse show" aria-labelledby="genques-headingOne" data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        .....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseTwo" aria-expanded="false" aria-controls="genques-collapseTwo">
+                                                        How to Change Password ?
+                                                        
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseTwo" class="accordion-collapse collapse" aria-labelledby="genques-headingTwo" data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        .....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseThree" aria-expanded="false" aria-controls="genques-collapseThree">
+                                                        Creating a File  
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseThree" class="accordion-collapse collapse" aria-labelledby="genques-headingThree" data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingFour">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseFour" aria-expanded="false" aria-controls="genques-collapseFour">
+                                                        Receiving a File 
+                                                       
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseFour" class="accordion-collapse collapse" aria-labelledby="genques-headingFour" data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        .....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingFive">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseFour" aria-expanded="false" aria-controls="genques-collapseFour">
+                                                        Creating a Unit 
+                                                       
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseFour" class="accordion-collapse collapse" aria-labelledby="genques-headingFive" data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        .....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!--end accordion-->
+                                    </div>
                                 </div>
 
-                            </div> <!-- end .h-100-->
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
+                                        
 
-                        </div> <!-- end col -->
+                                        <div class="accordion accordion-border-box" id="manageaccount-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingOne">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseOne" aria-expanded="false" aria-controls="manageaccount-collapseOne">
+                                                        Dispatching a File  
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseOne" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingOne" data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                      ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseTwo" aria-expanded="false" aria-controls="manageaccount-collapseTwo">
+                                                        File Traking
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseTwo" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingTwo" data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseThree" aria-expanded="false" aria-controls="manageaccount-collapseThree">
+                                                        Creating a User
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseThree" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingThree" data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        ....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingFour">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseFour" aria-expanded="false" aria-controls="manageaccount-collapseFour">
+                                                        Deleting a User
+                                                      
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseFour" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingFour" data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        ....
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingFive">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseFour" aria-expanded="false" aria-controls="manageaccount-collapseFour">
+                                                        Creating a Command / Department
+                                                        
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseFour" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingFive" data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        ....
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end accordion-->
+                                    </div>
+                                </div>
 
+                               
+                            </div>
+                        </div>
+                        <!--end col-->
                     </div>
+                    <!--end row-->
 
                 </div>
                 <!-- container-fluid -->
@@ -393,7 +466,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs
+                            Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
@@ -409,7 +483,7 @@
     </div>
     <!-- END layout-wrapper -->
 
-
+   
 
 
     <!--start back-to-top-->
