@@ -604,7 +604,19 @@
         })();
       });
   }
-
+  function b() {
+    (document.getElementById("two-column-menu").innerHTML = ""),
+      document.querySelector(".navbar-menu") &&
+        (document.querySelector(".navbar-menu").innerHTML = d),
+      document.getElementById("scrollbar").removeAttribute("data-simplebar"),
+      document.getElementById("navbar-nav").removeAttribute("data-simplebar"),
+      document.getElementById("scrollbar").classList.remove("h-100");
+    var a = M,
+      n = document.querySelectorAll("ul.navbar-nav > li.nav-item"),
+      o = "",
+      s = "";
+    
+  }
   function y(e) {
     "vertical" == e
       ? ((document.getElementById("two-column-menu").innerHTML = ""),
