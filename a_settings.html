@@ -195,32 +195,39 @@
 
                     <div id="two-column-menu">
                     </div>
-                   
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_dashboard.html">
-                                <i class="ri-dashboard-fill"></i> <span data-key="t-dashboards">Dashboard Overview</span>
+                            <a class="nav-link menu-link" href="a_dashboard.html">
+                                <i class="ri-dashboard-fill"></i> <span data-key="t-dashboards">Dashboard
+                                    Overview</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_admin.html">
-                                <i class="ri-admin-fill"></i> <span data-key="t-apps">Admin Management</span>
+                            <a class="nav-link menu-link" href="a_user_management.html">
+                                <i class="ri-admin-fill"></i> <span data-key="t-apps">User Management</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_command.html">
-                                <i class="ri-building-fill"></i> <span data-key="t-apps">Command Management</span>
+                            <a class="nav-link menu-link" href="a_unit_management.html">
+                                <i class="ri-building-fill"></i> <span data-key="t-apps">Unit Management</span>
                             </a>
                         </li>
+
+                        <li class="nav-item"></li>
+                        <a class="nav-link menu-link" href="a_sub_unit.html">
+                            <i class="ri-building-fill"></i> <span data-key="t-apps">Sub Unit</span>
+                        </a>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_settings.html">
+                            <a class="nav-link menu-link" href="a_settings.html">
                                 <i class="ri-settings-fill"></i> <span data-key="t-apps">Settings</span>
                             </a>
                         </li>
                         <hr style="color: rgb(255, 255, 255); border: 2px solid;">
                         <br>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_file_tracking.html">
+                            <a class="nav-link menu-link" href="a_file_tracking.html">
                                 <i class="ri-file-fill"></i> <span data-key="t-apps">File Tracking</span>
                             </a>
                         </li>
@@ -243,7 +250,7 @@
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
-       
+
         <div class="main-content">
 
             <div class="page-content">
@@ -256,116 +263,112 @@
 
 
                                 <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title mb-0">Change Password</h4>
+                                            </div><!-- end card header -->
 
-                                    <div class="col-xl-3 col-md-4">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p
-                                                            class="text-uppercase fw-medium text-muted text-truncate-2 mb-0">
-                                                            TOTAL NUMBER OF ADMIN :</p>
-                                                    </div>
+                                            <div id="unreceived-files" class="card-body">
+                                                <div class="listjs-table" id="customerList">
 
+                                                    <form class="tablelist-form" autocomplete="off">
+                                                        <div class="mb-3">
+                                                            <label for="command-field" class="form-label">Old
+                                                                Password</label>
+                                                            <input type="password" id="command-field"
+                                                                class="form-control" placeholder="Old Password"
+                                                                required />
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="command-field" class="form-label">New
+                                                                Password</label>
+                                                            <input type="password" id="command-field"
+                                                                class="form-control" placeholder="New Password"
+                                                                required />
+                                                        </div>
+
+
+                                                        <div class="mb-3">
+                                                            <label for="command-field" class="form-label">Confirm New
+                                                                Password</label>
+                                                            <input type="password" id="command-field"
+                                                                class="form-control" placeholder="Confirm New Password"
+                                                                required />
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <div class="hstack gap-2 justify-content-end">
+
+                                                                <button type="submit" class="btn"
+                                                                    style="background-color:grey; color: white;"
+                                                                    onmouseover="this.style.backgroundColor='#0b6528';"
+                                                                    onmouseout="this.style.backgroundColor='grey';"
+                                                                    id="add-btn">Update Password</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"
-                                                            id="unit_created_files_count">10</h4>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title rounded fs-3" style="background-color: grey;">
-                                                            <i class="ri-admin-line"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
+                                            </div><!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <!-- end col -->
 
-                                    <div class="col-xl-3 col-md-4">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p
-                                                            class="text-uppercase fw-medium text-muted text-truncate-2 mb-0">
-                                                            TOTAL NUMBER OF USERS :</p>
-                                                    </div>
+                                    <div class="col-xl-4">
 
+                                        <div class="card  rounded-4">
+                                            <div class="card-body p-0">
+                                                <div class="p-3">
+                                                    <h6 class="text-muted mb-0 fw-bold">Profile Details</h6>
                                                 </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"
-                                                            id="unit_created_files_count">10</h4>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title rounded fs-3" style="background-color: gray;"> 
-                                                            <i class="ri-user-line"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
+                                                <div data-simplebar style="max-height: 410px;" class="p-3 pt-0">
+                                                    <div class="acitivity-timeline acitivity-main">
+                                                        <div class="acitivity-item d-flex">
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h5 class="mb-1 lh-base"><i class="ri-user-fill"></i>
+                                                                    <a href="" style="color: grey;"
+                                                                        class="fw-medium">Name: Daniel DB</a>
+                                                                </h5>
+                                                            </div>
 
-                                    <div class="col-xl-3 col-md-4">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p
-                                                            class="text-uppercase fw-medium text-muted text-truncate-2 mb-0">
-                                                            TOTAL NUMBER OF COMMAND :</p>
-                                                    </div>
+                                                        </div>
 
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"
-                                                            id="unit_created_files_count">10</h4>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title rounded fs-3" style="background-color: gray;">
-                                                            <i class="ri-building-line"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
+                                                        <div class="acitivity-item d-flex">
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h5 class="mb-1 lh-base"><i class="bx bx-id-card"></i>
+                                                                    <a href="" style="color: grey;"
+                                                                        class="fw-medium">Service Number: NCS-01111</a>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acitivity-item d-flex">
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h5 class="mb-1 lh-base"> <i class="ri-command-fill"></i>
+                                                                    <a href="" style="color: grey;"
+                                                                        class="fw-medium">Unit: Logistics</a>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acitivity-item d-flex">
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <h5 class="mb-1 lh-base"> <i class="ri-building-fill"></i>
+                                                                    <a href="" style="color: grey;"
+                                                                        class="fw-medium">Command: Lagos</a>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
 
-                                    <div class="col-xl-3 col-md-4">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p
-                                                            class="text-uppercase fw-medium text-muted text-truncate-2 mb-0">
-                                                            FILE TRACKING :</p>
-                                                    </div>
 
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"
-                                                            id="unit_created_files_count">10</h4>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title rounded fs-3" style="background-color: gray;">
-                                                            <i class="ri-building-line"></i>
-                                                        </span>
+
                                                     </div>
                                                 </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
 
-                                </div> <!-- end row-->
+                                            </div>
+                                        </div> <!-- end card-->
+
+                                    </div> <!-- .col-->
+                                </div>
 
                             </div> <!-- end .h-100-->
 

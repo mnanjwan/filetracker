@@ -125,7 +125,8 @@
                                         <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"
                                             id="auth-toggle-icon"></i>
 
-                                        <span class="align-middle" id="toggle-instance" data-key="t-logout">Logout</span>
+                                        <span class="align-middle" id="toggle-instance"
+                                            data-key="t-logout">Logout</span>
                                     </a>
                                 </div>
                             </div>
@@ -198,30 +199,43 @@
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_dashboard.html">
-                                <i class="ri-dashboard-fill"></i> <span data-key="t-dashboards">Dashboard Overview</span>
+                            <a class="nav-link menu-link" href="u_dashboard.html">
+                                <i class="ri-dashboard-fill"></i> <span data-key="t-dashboards">Dashboard
+                                    Overview</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_admin.html">
-                                <i class="ri-admin-fill"></i> <span data-key="t-apps">Admin Management</span>
+                            <a class="nav-link menu-link" href="u_receive_files.html">
+                                <i class="ri-folder-download-line"></i> <span data-key="t-apps">Receive Files</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_command.html">
-                                <i class="ri-building-fill"></i> <span data-key="t-apps">Command Management</span>
+                            <a class="nav-link menu-link" href="u_file_management.html">
+                                <i class="ri-file-fill"></i> <span data-key="t-apps">File Management</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_settings.html">
+                            <a class="nav-link menu-link" href="u_dispatch_files.html">
+                                <i class="ri-file-copy-fill"></i> <span data-key="t-apps">Dispatch Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="u_file_tracking.html">
+                                <i class="ri-folder-history-line"></i> <span data-key="t-apps">File Tracking</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="u_settings.html">
                                 <i class="ri-settings-fill"></i> <span data-key="t-apps">Settings</span>
                             </a>
                         </li>
                         <hr style="color: rgb(255, 255, 255); border: 2px solid;">
+
                         <br>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_file_tracking.html">
-                                <i class="ri-file-fill"></i> <span data-key="t-apps">File Tracking</span>
+                            <a class="nav-link menu-link" href="u_help.html">
+                                <i class="ri-help-fill"></i> <span data-key="t-apps">Help</span>
                             </a>
                         </li>
                         <li class="nav-item" style="background-color: red;">
@@ -253,7 +267,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Admin Management</h4>
+                                <h4 class="mb-sm-0">Dispatch Files</h4>
                             </div>
                         </div>
                     </div>
@@ -263,7 +277,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">All Admin</h4>
+                                    <h4 class="card-title mb-0">Dispatched Files</h4>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
@@ -276,14 +290,15 @@
                                                         onmouseover="this.style.backgroundColor='#0b6528';"
                                                         onmouseout="this.style.backgroundColor='grey';"
                                                         data-bs-toggle="modal" id="create-btn"
-                                                        data-bs-target="#showModal"><i
-                                                            class="ri-add-line align-bottom me-1"></i> Create
-                                                        Admin</button>
-                                                    <button class="btn" onClick="deleteMultiple()"
+                                                        data-bs-target="#showDispatchModal"><i
+                                                            class="ri-subtract-line align-bottom me-1"></i> Dispatch
+                                                        File</button>
+
+                                                    <!-- <button class="btn" onClick="deleteMultiple()"
                                                         style="background-color:red; color: white;"
                                                         onmouseover="this.style.backgroundColor='#0b6528';"
                                                         onmouseout="this.style.backgroundColor='red';"><i
-                                                            class="ri-delete-bin-2-line"></i></button>
+                                                            class="ri-delete-bin-2-line"></i></button> -->
                                                 </div>
                                             </div>
                                             <div class="col-sm">
@@ -307,13 +322,11 @@
                                                                     id="checkAll" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="customer_name">Type</th>
-                                                        <th class="sort" data-sort="customer_name">Full Name</th>
-                                                        <th class="sort" data-sort="customer_name">Username</th>
-                                                        <th class="sort" data-sort="customer_name">Email</th>
-                                                        <th class="sort" data-sort="customer_name">Service Number</th>
-                                                        <th class="sort" data-sort="customer_name">Unit - Command</th>
-                                                        <th class="sort" data-sort="action">Action</th>
+                                                        <th class="sort" data-sort="customer_name">File Number</th>
+                                                        <th class="sort" data-sort="customer_name">Precedence / Priority
+                                                        </th>
+                                                        <th class="sort" data-sort="customer_name">File Description</th>
+                                                        <!-- <th class="sort" data-sort="action">Action</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody class="list form-check-all">
@@ -327,14 +340,11 @@
                                                         <td class="id" style="display:none;"><a
                                                                 href="javascript:void(0);"
                                                                 class="fw-medium link-primary">#1</a></td>
-                                                        <td class="customer_name">Super Admin</td>
-                                                        <td class="customer_name">Daniel DB</td>
+                                                        <td class="customer_name">#33333</td>
+                                                        <td class="customer_name">Sharp</td>
                                                         <td class="customer_name">Dan001</td>
-                                                        <td class="customer_name">Dan@gmail.com</td>
-                                                        <td class="customer_name">NCS-11111111</td>
-                                                        <td class="customer_name">Food - Lagos</td>
 
-                                                        <td>
+                                                        <!-- <td>
                                                             <div class="d-flex gap-2" style="float: right;">
                                                                 <div class="edit">
                                                                     <button class="btn btn-sm"
@@ -353,7 +363,7 @@
                                                                         data-bs-target="#deleteRecordModal">Remove</button>
                                                                 </div>
                                                             </div>
-                                                        </td>
+                                                        </td> -->
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -392,71 +402,51 @@
                     </div>
                     <!-- end row -->
 
-
-                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="showDispatchModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Create Admin</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Dispatch File</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                         id="close-modal"></button>
                                 </div>
                                 <form class="tablelist-form" autocomplete="off">
                                     <div class="modal-body">
-
                                         <div class="mb-3">
-                                            <label for="status-field" class="form-label">Choose Admin</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Admin Type --</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Super_Admin">Super Admin</option>
+                                            <label for="admin-field" class="form-label">File Number</label>
+                                            <input type="text" id="admin-field" class="form-control"
+                                                placeholder="File Number" value="AO-11111" required />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="status-field" class="form-label">Command</label>
+                                            <select class="form-control" data-trigger name="status-field"
+                                                id="status-field" required>
+                                                <option default>-- Select Option --</option>
+                                                <option value="Admin">Lagos</option>
+                                                <option value="Super_Admin">Abuja</option>
+                                                <option value="Super_Admin">Kano</option>
                                             </select>
                                         </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Full Name</label>
-                                            <input type="text" id="admin-field" class="form-control"
-                                                placeholder="Enter Name" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Username</label>
-                                            <input type="text" id="username-field" class="form-control"
-                                                placeholder="Enter Username" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Email</label>
-                                            <input type="text" id="email-field" class="form-control"
-                                                placeholder="Enter Email" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Service Number</label>
-                                            <input type="text" id="srv-num-field" class="form-control"
-                                                placeholder="Enter Username" value="NSC-" required />
-                                        </div>
-
                                         <div class="mb-3">
                                             <label for="status-field" class="form-label">Unit</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Unit --</option>
-                                                <option value="">Food</option>
-                                                <option value="Active">Logistics</option>
+                                            <select class="form-control" data-trigger name="status-field"
+                                                id="status-field" required>
+                                                <option default>-- Select Option --</option>
+                                                <option value="Admin">Logistics</option>
+                                                <option value="Super_Admin">Food</option>
                                             </select>
                                         </div>
-
-                                        <div class="mb-3"> 
-                                            <label for="status-field" class="form-label">Command</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Command --</option>
-                                                <option value="">Lagos</option>
-                                                <option value="Active">Abuja</option>
-                                                <option value="Block">Kanu</option>
+                                        <div class="mb-3">
+                                            <label for="status-field" class="form-label">Precedence / Prority</label>
+                                            <select class="form-control" data-trigger name="status-field"
+                                                id="status-field" required>
+                                                <option default>-- Select Option --</option>
+                                                <option value="Admin">Active</option>
+                                                <option value="Super_Admin">Pending</option>
+                                                <option value="Super_Admin">Waiting</option>
                                             </select>
                                         </div>
-
                                     </div>
                                     <div class="modal-footer">
                                         <div class="hstack gap-2 justify-content-end">
@@ -465,127 +455,14 @@
                                             <button type="submit" class="btn"
                                                 style="background-color:grey; color: white;"
                                                 onmouseover="this.style.backgroundColor='#0b6528';"
-                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Add
-                                                Admin</button>
+                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Dispatch
+                                                File</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-
-                    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edit Admin</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        id="close-modal"></button>
-                                </div>
-                                
-                                <form class="tablelist-form" autocomplete="off">
-                                    <div class="modal-body">
-
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Choose Admin</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Admin Type --</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Super_Admin">Super Admin</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Full Name</label>
-                                            <input type="text" id="admin-field" class="form-control"
-                                                placeholder="Enter Name" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Username</label>
-                                            <input type="text" id="username-field" class="form-control"
-                                                placeholder="Enter Username" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Email</label>
-                                            <input type="text" id="email-field" class="form-control"
-                                                placeholder="Enter Email" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Service Number</label>
-                                            <input type="text" id="srv-num-field" class="form-control"
-                                                placeholder="Enter Username" value="NSC-" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Unit</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Unit --</option>
-                                                <option value="">Food</option>
-                                                <option value="Active">Logistics</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-3"> 
-                                            <label for="status-field" class="form-label">Command</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Command --</option>
-                                                <option value="">Lagos</option>
-                                                <option value="Active">Abuja</option>
-                                                <option value="Block">Kanu</option>
-                                            </select>
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <button type="button" class="btn btn-light"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn"
-                                                style="background-color:grey; color: white;"
-                                                onmouseover="this.style.backgroundColor='#0b6528';"
-                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Add
-                                                Admin</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        id="btn-close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mt-2 text-center">
-                                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
-                                            colors="primary:#f7b84b,secondary:#f06548"
-                                            style="width:100px;height:100px"></lord-icon>
-                                        <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                                            <h4>Are you Sure ?</h4>
-                                            <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record
-                                                ?</p>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                                        <button type="button" class="btn w-sm btn-light"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes,
-                                            Delete It!</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end modal -->
 
                 </div>
                 <!-- container-fluid -->

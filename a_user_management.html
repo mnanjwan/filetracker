@@ -198,29 +198,36 @@
                     </div>
                     <ul class="navbar-nav" id="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_dashboard.html">
+                            <a class="nav-link menu-link" href="a_dashboard.html">
                                 <i class="ri-dashboard-fill"></i> <span data-key="t-dashboards">Dashboard Overview</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_admin.html">
-                                <i class="ri-admin-fill"></i> <span data-key="t-apps">Admin Management</span>
+                            <a class="nav-link menu-link" href="a_user_management.html">
+                                <i class="ri-admin-fill"></i> <span data-key="t-apps">User Management</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="create_command.html">
-                                <i class="ri-building-fill"></i> <span data-key="t-apps">Command Management</span>
+                            <a class="nav-link menu-link" href="a_unit_management.html">
+                                <i class="ri-building-fill"></i> <span data-key="t-apps">Unit Management</span>
                             </a>
                         </li>
+
+                        <li class="nav-item"></li>
+                            <a class="nav-link menu-link" href="a_sub_unit.html">
+                                <i class="ri-building-fill"></i> <span data-key="t-apps">Sub Unit</span>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_settings.html">
+                            <a class="nav-link menu-link" href="a_settings.html">
                                 <i class="ri-settings-fill"></i> <span data-key="t-apps">Settings</span>
                             </a>
                         </li>
                         <hr style="color: rgb(255, 255, 255); border: 2px solid;">
                         <br>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="s_file_tracking.html">
+                            <a class="nav-link menu-link" href="a_file_tracking.html">
                                 <i class="ri-file-fill"></i> <span data-key="t-apps">File Tracking</span>
                             </a>
                         </li>
@@ -229,8 +236,8 @@
                                 <i class="ri-lock-fill"></i> <span data-key="t-apps">Logout</span>
                             </a>
                         </li>
-
                     </ul>
+                    
                 </div>
                 <!-- Sidebar -->
             </div>
@@ -253,7 +260,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Admin Management</h4>
+                                <h4 class="mb-sm-0">User Management</h4>
                             </div>
                         </div>
                     </div>
@@ -263,7 +270,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">All Admin</h4>
+                                    <h4 class="card-title mb-0">All User</h4>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
@@ -278,7 +285,7 @@
                                                         data-bs-toggle="modal" id="create-btn"
                                                         data-bs-target="#showModal"><i
                                                             class="ri-add-line align-bottom me-1"></i> Create
-                                                        Admin</button>
+                                                        User</button>
                                                     <button class="btn" onClick="deleteMultiple()"
                                                         style="background-color:red; color: white;"
                                                         onmouseover="this.style.backgroundColor='#0b6528';"
@@ -307,9 +314,7 @@
                                                                     id="checkAll" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="customer_name">Type</th>
                                                         <th class="sort" data-sort="customer_name">Full Name</th>
-                                                        <th class="sort" data-sort="customer_name">Username</th>
                                                         <th class="sort" data-sort="customer_name">Email</th>
                                                         <th class="sort" data-sort="customer_name">Service Number</th>
                                                         <th class="sort" data-sort="customer_name">Unit - Command</th>
@@ -327,9 +332,7 @@
                                                         <td class="id" style="display:none;"><a
                                                                 href="javascript:void(0);"
                                                                 class="fw-medium link-primary">#1</a></td>
-                                                        <td class="customer_name">Super Admin</td>
                                                         <td class="customer_name">Daniel DB</td>
-                                                        <td class="customer_name">Dan001</td>
                                                         <td class="customer_name">Dan@gmail.com</td>
                                                         <td class="customer_name">NCS-11111111</td>
                                                         <td class="customer_name">Food - Lagos</td>
@@ -398,7 +401,7 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Create Admin</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                         id="close-modal"></button>
                                 </div>
@@ -406,24 +409,9 @@
                                     <div class="modal-body">
 
                                         <div class="mb-3">
-                                            <label for="status-field" class="form-label">Choose Admin</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Admin Type --</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Super_Admin">Super Admin</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-3">
                                             <label for="admin-field" class="form-label">Full Name</label>
                                             <input type="text" id="admin-field" class="form-control"
                                                 placeholder="Enter Name" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Username</label>
-                                            <input type="text" id="username-field" class="form-control"
-                                                placeholder="Enter Username" required />
                                         </div>
 
                                         <div class="mb-3">
@@ -447,6 +435,16 @@
                                             </select>
                                         </div>
 
+                                        <div class="mb-3">
+                                            <label for="status-field" class="form-label">Sub Unit <small style="color: red;">(optional)</small></label>
+                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
+                                                <option default>-- Select Unit --</option>
+                                                <option value="">Food</option>
+                                                <option value="Active">Logistics</option>
+                                            </select>
+                                        </div>
+
+
                                         <div class="mb-3"> 
                                             <label for="status-field" class="form-label">Command</label>
                                             <select class="form-control" data-trigger name="status-field" id="status-field" required>
@@ -466,7 +464,7 @@
                                                 style="background-color:grey; color: white;"
                                                 onmouseover="this.style.backgroundColor='#0b6528';"
                                                 onmouseout="this.style.backgroundColor='grey';" id="add-btn">Add
-                                                Admin</button>
+                                                User</button>
                                         </div>
                                     </div>
                                 </form>
@@ -479,7 +477,7 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Edit Admin</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                         id="close-modal"></button>
                                 </div>
@@ -488,24 +486,9 @@
                                     <div class="modal-body">
 
                                         <div class="mb-3">
-                                            <label for="status-field" class="form-label">Choose Admin</label>
-                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
-                                                <option default>-- Select Admin Type --</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="Super_Admin">Super Admin</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-3">
                                             <label for="admin-field" class="form-label">Full Name</label>
                                             <input type="text" id="admin-field" class="form-control"
                                                 placeholder="Enter Name" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">Username</label>
-                                            <input type="text" id="username-field" class="form-control"
-                                                placeholder="Enter Username" required />
                                         </div>
 
                                         <div class="mb-3">
@@ -529,6 +512,16 @@
                                             </select>
                                         </div>
 
+                                        <div class="mb-3">
+                                            <label for="status-field" class="form-label">Sub Unit <small style="color: red;">(optional)</small></label>
+                                            <select class="form-control" data-trigger name="status-field" id="status-field" required>
+                                                <option default>-- Select Unit --</option>
+                                                <option value="">Food</option>
+                                                <option value="Active">Logistics</option>
+                                            </select>
+                                        </div>
+
+
                                         <div class="mb-3"> 
                                             <label for="status-field" class="form-label">Command</label>
                                             <select class="form-control" data-trigger name="status-field" id="status-field" required>
@@ -547,11 +540,12 @@
                                             <button type="submit" class="btn"
                                                 style="background-color:grey; color: white;"
                                                 onmouseover="this.style.backgroundColor='#0b6528';"
-                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Add
-                                                Admin</button>
+                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Edit
+                                                User</button>
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>
