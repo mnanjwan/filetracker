@@ -24,6 +24,7 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -262,127 +263,208 @@
                 <div class="container-fluid">
 
                     <div class="row">
-                        <div class="col">
-
-                            <div class="h-100">
-
-
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title mb-0">Change Password</h4>
-                                            </div><!-- end card header -->
-
-                                            <div id="unreceived-files" class="card-body">
-                                                <div class="listjs-table" id="customerList">
-
-                                                    <form class="tablelist-form" autocomplete="off">
-                                                        <div class="mb-3">
-                                                            <label for="command-field" class="form-label">Old
-                                                                Password</label>
-                                                            <input type="password" id="command-field"
-                                                                class="form-control" placeholder="Old Password"
-                                                                required />
-                                                        </div>
-
-                                                        <div class="mb-3">
-                                                            <label for="command-field" class="form-label">New
-                                                                Password</label>
-                                                            <input type="password" id="command-field"
-                                                                class="form-control" placeholder="New Password"
-                                                                required />
-                                                        </div>
-
-
-                                                        <div class="mb-3">
-                                                            <label for="command-field" class="form-label">Confirm New
-                                                                Password</label>
-                                                            <input type="password" id="command-field"
-                                                                class="form-control" placeholder="Confirm New Password"
-                                                                required />
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <div class="hstack gap-2 justify-content-end">
-
-                                                                <button type="submit" class="btn"
-                                                                    style="background-color:grey; color: white;"
-                                                                    onmouseover="this.style.backgroundColor='#0b6528';"
-                                                                    onmouseout="this.style.backgroundColor='grey';"
-                                                                    id="add-btn">Update Password</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div><!-- end card -->
+                        <div class="col-lg-12">
+                            <div class="card rounded-0 bg-success-subtle mx-n4 mt-n4 border-top">
+                                <div class="px-4">
+                                    <div class="row">
+                                        <div class="col-xxl-5 align-self-center">
+                                            <div class="py-4">
+                                                <h4 class="display-6 coming-soon-text">Help!!!</h4>
+                                                <p class="text-success fs-15 mt-3">Guide to using FileTrakA!</p>
+                                            </div>
                                         </div>
-                                        <!-- end col -->
+                                        <div class="col-xxl-3 ms-auto">
+                                            <div class="mb-n5 pb-1 faq-img d-none d-xxl-block">
+                                                <img src="assets/images/faq-img.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- end col -->
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
 
-                                    <div class="col-xl-4">
+                            <div class="row justify-content-evenly mb-4">
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
 
-                                        <div class="card  rounded-4">
-                                            <div class="card-body p-0">
-                                                <div class="p-3">
-                                                    <h6 class="text-muted mb-0 fw-bold">Profile Details</h6>
+
+                                        <div class="accordion accordion-border-box" id="genques-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseOne"
+                                                        aria-expanded="true" aria-controls="genques-collapseOne">
+                                                        How to Login ?
+
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="genques-headingOne"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        <p></p>
+                                                        <li>Click the Log In button on the landing page.</li>
+                                                        <li>Enter your service number with the prefix "NCS".</li>
+                                                        <li>Enter your password.</li>
+                                                        <li>Click the Login button or press Enter.</li>
+                                                    </div>
                                                 </div>
-                                                <div data-simplebar style="max-height: 410px;" class="p-3 pt-0">
-                                                    <div class="acitivity-timeline acitivity-main">
-                                                        <div class="acitivity-item d-flex">
-                                                            <div class="flex-grow-1 ms-3">
-                                                                <h5 class="mb-1 lh-base"><i class="ri-user-fill"></i>
-                                                                    <a href="" style="color: grey;"
-                                                                        class="fw-medium">Name: Daniel DB</a>
-                                                                </h5>
-                                                            </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseTwo"
+                                                        aria-expanded="false" aria-controls="genques-collapseTwo">
+                                                        How to Change Password ?
 
-                                                        </div>
-
-                                                        <div class="acitivity-item d-flex">
-                                                            <div class="flex-grow-1 ms-3">
-                                                                <h5 class="mb-1 lh-base"><i class="bx bx-id-card"></i>
-                                                                    <a href="" style="color: grey;"
-                                                                        class="fw-medium">Service Number: NCS-01111</a>
-                                                                </h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="acitivity-item d-flex">
-                                                            <div class="flex-grow-1 ms-3">
-                                                                <h5 class="mb-1 lh-base"> <i
-                                                                        class="ri-command-fill"></i>
-                                                                    <a href="" style="color: grey;"
-                                                                        class="fw-medium">Unit: Logistics</a>
-                                                                </h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="acitivity-item d-flex">
-                                                            <div class="flex-grow-1 ms-3">
-                                                                <h5 class="mb-1 lh-base"> <i
-                                                                        class="ri-building-fill"></i>
-                                                                    <a href="" style="color: grey;"
-                                                                        class="fw-medium">Command: Lagos</a>
-                                                                </h5>
-                                                            </div>
-                                                        </div>
-
-
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingTwo"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        <li>Click on Change Password either on the landing page or on
+                                                            the login page</li>
+                                                        <li>On the login page, click Forgot Password? under the login
+                                                            button. This will take you to the Forgot Password page.</li>
+                                                        <li>Perform the following steps</li>
+                                                        <ul>
+                                                            <li>o Enter your service number. <br>
+                                                                o Enter your email address and click Send One-Time
+                                                                Password (OTP).<br>
+                                                                o You will receive a 7-digit OTP. <br>
+                                                                o Enter the OTP and change your password.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#genques-collapseThree" aria-expanded="false"
+                                                        aria-controls="genques-collapseThree">
+                                                        Creating a File
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingThree"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Click the Create New File icon on the left side of the
+                                                        dashboard. This will open the Create File Form. <br>
+                                                        2. Select Create File under the Action dropdown. <br>
+                                                        3. In the File Number field, enter the file number. (The file
+                                                        number will have a predictive prefix of "NCS-", so do not add a
+                                                        backslash as the system will interpret it as a path.) <br>
+                                                        4. Select the precedence marking from the dropdown. <br>
+                                                        5. Type the File Description. <br>
+                                                        6. Click Create File or press Enter. <br>
 
                                                     </div>
                                                 </div>
-
                                             </div>
-                                        </div> <!-- end card-->
+                                          
 
-                                    </div> <!-- .col-->
+                                        </div>
+                                        <!--end accordion-->
+                                    </div>
                                 </div>
 
-                            </div> <!-- end .h-100-->
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
 
-                        </div> <!-- end col -->
+
+                                        <div class="accordion accordion-border-box" id="manageaccount-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#manageaccount-collapseOne"
+                                                        aria-expanded="false" aria-controls="manageaccount-collapseOne">
+                                                        Dispatching a File
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="manageaccount-headingOne"
+                                                    data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Click Dispatch Files. The Dispatch File dialog box will
+                                                        appear. <br>
+                                                        2. You can search for a file either by File ID or File
+                                                        Description. <br>
+                                                        3. Once you provide the necessary information, the auto-search
+                                                        boxes will display a list of options. <br>
+                                                        4. Select the appropriate Command, Unit, and Precedence Marking.
+                                                        <br>
+                                                        5. Click the Dispatch button to send the file. <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#manageaccount-collapseTwo"
+                                                        aria-expanded="false" aria-controls="manageaccount-collapseTwo">
+                                                        File Traking
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="manageaccount-headingTwo"
+                                                    data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        1. To track a file and view the audit trail, enter the File ID.
+                                                        <br>
+                                                        2. If the File ID is not available, you can search using the
+                                                        File Description. <br>
+                                                        3. If the file is within your purview, it will appear along with
+                                                        its details. <br>
+                                                        4. Copy the File ID to conduct a proper audit trail. <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingFour">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseFour"
+                                                        aria-expanded="false" aria-controls="genques-collapseFour">
+                                                        Receiving a File
+
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseFour" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingFour"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Log in to your dashboard. All files sent to you will appear
+                                                        in order from newest to oldest. <br>
+                                                        2. Ensure you have received the file, then click Receive File.
+                                                        <br>
+                                                        3. A prompt will appear asking if you are sure you have received
+                                                        the file. Click OK. <br>
+                                                        4. The file will automatically move from Files Yet to be
+                                                        Received by Unit to Files Received by Unit.
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                              
+                                        </div>
+                                        <!--end accordion-->
+                                    </div>
+                                </div>
 
 
+                            </div>
+                        </div>
+                        <!--end col-->
                     </div>
+                    <!--end row-->
 
                 </div>
                 <!-- container-fluid -->
@@ -393,12 +475,12 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © FileTrakA. Nigeria Customs
-                            Service. All rights reserved. Powered by ED Antia psc Assistant Comptroller of Customs
+                            <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs
+                            Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                <a href="">FAQ</a>
+                                <a href="">HELP</a>
                             </div>
                         </div>
                     </div>

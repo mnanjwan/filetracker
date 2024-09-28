@@ -248,240 +248,215 @@
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
+       
         <div class="main-content">
 
             <div class="page-content">
                 <div class="container-fluid">
 
-                    <!-- start page title -->
                     <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">File Tracking</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end page title -->
-
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">File Tracking</h4>
-                                </div><!-- end card header -->
-
-                                <div class="card-body">
-
-                                    <form class="tablelist-form" autocomplete="off">
-                                        <div class="modal-body">
-                                            <div class="mb-3">
-                                                <label for="admin-field" class="form-label">Search with ID or
-                                                    Name</label>
-                                                <input type="text" id="admin-field" class="form-control"
-                                                    placeholder="Search with ID or Name" required />
+                        <div class="col-lg-12">
+                            <div class="card rounded-0 bg-success-subtle mx-n4 mt-n4 border-top">
+                                <div class="px-4">
+                                    <div class="row">
+                                        <div class="col-xxl-5 align-self-center">
+                                            <div class="py-4">
+                                                <h4 class="display-6 coming-soon-text">Help!!!</h4>
+                                                <p class="text-success fs-15 mt-3">Guide to using FileTrakA!</p>
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <div class="hstack gap-2 justify-content-end">
-                                                <button type="submit" class="btn"
-                                                    style="background-color:grey; color: white;"
-                                                    onmouseover="this.style.backgroundColor='#0b6528';"
-                                                    onmouseout="this.style.backgroundColor='grey';"
-                                                    id="add-btn">Search</button>
+                                        <div class="col-xxl-3 ms-auto">
+                                            <div class="mb-n5 pb-1 faq-img d-none d-xxl-block">
+                                                <img src="assets/images/faq-img.png" alt="" class="img-fluid">
                                             </div>
                                         </div>
-                                    </form>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->
-                     <center>
-                        <h1>Result</h1>
-                     </center>
-
-                    <div class="table-responsive table-card mt-3 mb-1">
-                        <table class="table align-middle table-nowrap" id="customerTable">
-                            <thead class="table-light">
-                                <tr>
-                                    <th scope="col" style="width: 50px;">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="checkAll"
-                                                value="option">
-                                        </div>
-                                    </th>
-                                    <th class="sort" data-sort="customer_name">File Number</th>
-                                    <th class="sort" data-sort="customer_name">Precedence / Priority
-                                    </th>
-                                    <th class="sort" data-sort="customer_name">File Description</th>
-                                    <!-- <th class="sort" data-sort="action">Action</th> -->
-                                </tr>
-                            </thead>
-                            <tbody class="list form-check-all">
-                                <tr>
-                                    <th scope="row">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="chk_child"
-                                                value="option1">
-                                        </div>
-                                    </th>
-                                    <td class="id" style="display:none;"><a href="javascript:void(0);"
-                                            class="fw-medium link-primary">#1</a></td>
-                                    <td class="customer_name">#33333</td>
-                                    <td class="customer_name">Sharp</td>
-                                    <td class="customer_name">Dan001</td>
-
-                                    <!-- <td>
-                                        <div class="d-flex gap-2" style="float: right;">
-                                            <div class="edit">
-                                                <button class="btn btn-sm"
-                                                    style="background-color:grey; color: white;"
-                                                    onmouseover="this.style.backgroundColor='#0b6528';"
-                                                    onmouseout="this.style.backgroundColor='grey';"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#editModal">Edit</button>
-                                            </div>
-                                            <div class="remove">
-                                                <button class="btn btn-sm"
-                                                    style="background-color:red; color: white;"
-                                                    onmouseover="this.style.backgroundColor='#0b6528';"
-                                                    onmouseout="this.style.backgroundColor='red';"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#deleteRecordModal">Remove</button>
-                                            </div>
-                                        </div>
-                                    </td> -->
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="noresult" style="display: none">
-                            <div class="text-center">
-                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                    colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px">
-                                </lord-icon>
-                                <h5 class="mt-2">Sorry! No Result Found</h5>
-                                <p class="text-muted mb-0">We've searched more than 150+ Orders We
-                                    did not find any
-                                    orders for you search.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Create File</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        id="close-modal"></button>
+                                    </div>
                                 </div>
-                                <form class="tablelist-form" autocomplete="off">
-                                    <div class="modal-body">
-
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">File Number</label>
-                                            <input type="text" id="admin-field" class="form-control"
-                                                placeholder="File Number" required />
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Precedence / Prority</label>
-                                            <select class="form-control" data-trigger name="status-field"
-                                                id="status-field" required>
-                                                <option default>-- Select Option --</option>
-                                                <option value="Admin">Active</option>
-                                                <option value="Super_Admin">Pending</option>
-                                                <option value="Super_Admin">Waiting</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">File Description</label>
-                                            <textarea class="form-control" name="" id=""></textarea>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <button type="button" class="btn btn-light"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn"
-                                                style="background-color:grey; color: white;"
-                                                onmouseover="this.style.backgroundColor='#0b6528';"
-                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Add
-                                                File</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <!-- end card body -->
                             </div>
-                        </div>
-                    </div>
+                            <!-- end card -->
 
-                    <div class="modal fade" id="showDispatchModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Dispatch File</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                        id="close-modal"></button>
+                            <div class="row justify-content-evenly mb-4">
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
+
+
+                                        <div class="accordion accordion-border-box" id="genques-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseOne"
+                                                        aria-expanded="true" aria-controls="genques-collapseOne">
+                                                        How to Login ?
+
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseOne" class="accordion-collapse collapse show"
+                                                    aria-labelledby="genques-headingOne"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        <p></p>
+                                                        <li>Click the Log In button on the landing page.</li>
+                                                        <li>Enter your service number with the prefix "NCS".</li>
+                                                        <li>Enter your password.</li>
+                                                        <li>Click the Login button or press Enter.</li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseTwo"
+                                                        aria-expanded="false" aria-controls="genques-collapseTwo">
+                                                        How to Change Password ?
+
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingTwo"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        <li>Click on Change Password either on the landing page or on
+                                                            the login page</li>
+                                                        <li>On the login page, click Forgot Password? under the login
+                                                            button. This will take you to the Forgot Password page.</li>
+                                                        <li>Perform the following steps</li>
+                                                        <ul>
+                                                            <li>o Enter your service number. <br>
+                                                                o Enter your email address and click Send One-Time
+                                                                Password (OTP).<br>
+                                                                o You will receive a 7-digit OTP. <br>
+                                                                o Enter the OTP and change your password.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#genques-collapseThree" aria-expanded="false"
+                                                        aria-controls="genques-collapseThree">
+                                                        Creating a File
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingThree"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Click the Create New File icon on the left side of the
+                                                        dashboard. This will open the Create File Form. <br>
+                                                        2. Select Create File under the Action dropdown. <br>
+                                                        3. In the File Number field, enter the file number. (The file
+                                                        number will have a predictive prefix of "NCS-", so do not add a
+                                                        backslash as the system will interpret it as a path.) <br>
+                                                        4. Select the precedence marking from the dropdown. <br>
+                                                        5. Type the File Description. <br>
+                                                        6. Click Create File or press Enter. <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+
+                                        </div>
+                                        <!--end accordion-->
+                                    </div>
                                 </div>
-                                <form class="tablelist-form" autocomplete="off">
-                                    <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="admin-field" class="form-label">File Number</label>
-                                            <input type="text" id="admin-field" class="form-control"
-                                                placeholder="File Number" value="AO-11111" required />
+
+                                <div class="col-lg-6">
+                                    <div class="mt-3">
+
+
+                                        <div class="accordion accordion-border-box" id="manageaccount-accordion">
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#manageaccount-collapseOne"
+                                                        aria-expanded="false" aria-controls="manageaccount-collapseOne">
+                                                        Dispatching a File
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="manageaccount-headingOne"
+                                                    data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Click Dispatch Files. The Dispatch File dialog box will
+                                                        appear. <br>
+                                                        2. You can search for a file either by File ID or File
+                                                        Description. <br>
+                                                        3. Once you provide the necessary information, the auto-search
+                                                        boxes will display a list of options. <br>
+                                                        4. Select the appropriate Command, Unit, and Precedence Marking.
+                                                        <br>
+                                                        5. Click the Dispatch button to send the file. <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="manageaccount-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#manageaccount-collapseTwo"
+                                                        aria-expanded="false" aria-controls="manageaccount-collapseTwo">
+                                                        File Traking
+                                                    </button>
+                                                </h2>
+                                                <div id="manageaccount-collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="manageaccount-headingTwo"
+                                                    data-bs-parent="#manageaccount-accordion">
+                                                    <div class="accordion-body">
+                                                        1. To track a file and view the audit trail, enter the File ID.
+                                                        <br>
+                                                        2. If the File ID is not available, you can search using the
+                                                        File Description. <br>
+                                                        3. If the file is within your purview, it will appear along with
+                                                        its details. <br>
+                                                        4. Copy the File ID to conduct a proper audit trail. <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow">
+                                                <h2 class="accordion-header" id="genques-headingFour">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#genques-collapseFour"
+                                                        aria-expanded="false" aria-controls="genques-collapseFour">
+                                                        Receiving a File
+
+                                                    </button>
+                                                </h2>
+                                                <div id="genques-collapseFour" class="accordion-collapse collapse"
+                                                    aria-labelledby="genques-headingFour"
+                                                    data-bs-parent="#genques-accordion">
+                                                    <div class="accordion-body">
+                                                        1. Log in to your dashboard. All files sent to you will appear
+                                                        in order from newest to oldest. <br>
+                                                        2. Ensure you have received the file, then click Receive File.
+                                                        <br>
+                                                        3. A prompt will appear asking if you are sure you have received
+                                                        the file. Click OK. <br>
+                                                        4. The file will automatically move from Files Yet to be
+                                                        Received by Unit to Files Received by Unit.
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                              
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Command</label>
-                                            <select class="form-control" data-trigger name="status-field"
-                                                id="status-field" required>
-                                                <option default>-- Select Option --</option>
-                                                <option value="Admin">Lagos</option>
-                                                <option value="Super_Admin">Abuja</option>
-                                                <option value="Super_Admin">Kano</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Unit</label>
-                                            <select class="form-control" data-trigger name="status-field"
-                                                id="status-field" required>
-                                                <option default>-- Select Option --</option>
-                                                <option value="Admin">Logistics</option>
-                                                <option value="Super_Admin">Food</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="status-field" class="form-label">Precedence / Prority</label>
-                                            <select class="form-control" data-trigger name="status-field"
-                                                id="status-field" required>
-                                                <option default>-- Select Option --</option>
-                                                <option value="Admin">Active</option>
-                                                <option value="Super_Admin">Pending</option>
-                                                <option value="Super_Admin">Waiting</option>
-                                            </select>
-                                        </div>
+                                        <!--end accordion-->
                                     </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <button type="button" class="btn btn-light"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn"
-                                                style="background-color:grey; color: white;"
-                                                onmouseover="this.style.backgroundColor='#0b6528';"
-                                                onmouseout="this.style.backgroundColor='grey';" id="add-btn">Dispatch
-                                                File</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
+
+
                             </div>
                         </div>
+                        <!--end col-->
                     </div>
+                    <!--end row-->
 
                 </div>
                 <!-- container-fluid -->
@@ -493,7 +468,12 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <script>document.write(new Date().getFullYear())</script> © FileTrakA | Nigeria Customs
-                            Service | All rights reserved | Powered by E. D. Antia psc Assistant Comptroller of Customs.
+                            Service | All rights reserved | Powered by ED Antia psc Assistant Comptroller of Customs.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                <a href="">HELP</a>
+                            </div>
                         </div>
                     </div>
                 </div>
